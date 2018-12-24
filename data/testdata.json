@@ -1,0 +1,37 @@
+[
+    {
+        "client_msg_id": "",
+        "type": "message",
+        "text": "[10-11] this is a test",
+        "user": "U75P2QJH2",
+        "ts": "1544626427.221200"
+    },
+    {
+        "client_msg_id": "",
+        "type": "message",
+        "text": "this is not documentation",
+        "user": "U75P2QJH2",
+        "ts": "1544626427.221200"
+    },
+    {
+        "client_msg_id": "",
+        "type": "message",
+        "text": "[10-12] this is other documentation",
+        "user": "U38M4GQEQ",
+        "ts": "1544626427.221200"
+    },
+    {
+        "client_msg_id": "",
+        "type": "message",
+        "text": "[cont] of the documentation system",
+        "user": "U75P2QJH2",
+        "ts": "1544626427.221200"
+    },
+    {
+        "client_msg_id": "",
+        "type": "message",
+        "text": "[cont] as a second test of the system",
+        "user": "U38M4GQEQ",
+        "ts": "1544626427.221200"
+    }
+]

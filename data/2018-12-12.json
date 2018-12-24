@@ -1,0 +1,1284 @@
+[
+    {
+        "client_msg_id": "5DD3223C-9A90-4AFB-B2E2-193E277B8CEA",
+        "type": "message",
+        "text": "[12-11] Today we had some parts of the intake 3D printed. The bucket was being printed while I was there and Gilton was supposedly working on the marker. I was working on making the intake actually work, by drilling holes in the right places so we could attach a motor to run the surgical tubing. I did this successfully, with a little bit of fixing (we now have a sort of long hole) but it is functional. Daniel came up with another ingenious idea to make an adapter to the new surgical tubing bar: to make a part that starts out square for the vex motor hole, and then use prongs to snap into holes made on the bar.",
+        "user": "U75P2QJH2",
+        "ts": "1544626427.221200",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "[12-11] Today I spent most of the day supervising the bucket shelf, or main body, of the intake while it 3-d printed. About 2 hours into the print, one of the support columns collapsed, and so I improvised and stopgap using another piece of plastic and a lot of masking tape. The improvised column fell over frequently, so I had to supervise the part to fix it when it did. Eventually a growing overhang of the part grew close enough that I could bind the column to it with masking tape, and finally at about 5:30, the printer completed the rod which rested on the support material. Thus, despite a potentially catastrophic print error, the part came out alright.",
+        "files": [
+            {
+                "id": "FERUZSEH2",
+                "created": 1544631201,
+                "timestamp": 1544631201,
+                "name": "Image from iOS.jpg",
+                "title": "Image from iOS",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U7007DAE8",
+                "editable": false,
+                "size": 1146185,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FERUZSEH2\/image_from_ios.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FERUZSEH2\/download\/image_from_ios.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUZSEH2-2c33d9f789\/image_from_ios_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUZSEH2-2c33d9f789\/image_from_ios_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUZSEH2-2c33d9f789\/image_from_ios_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 270,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUZSEH2-2c33d9f789\/image_from_ios_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 360,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUZSEH2-2c33d9f789\/image_from_ios_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUZSEH2-2c33d9f789\/image_from_ios_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 540,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUZSEH2-2c33d9f789\/image_from_ios_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1067,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUZSEH2-2c33d9f789\/image_from_ios_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 720,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUZSEH2-2c33d9f789\/image_from_ios_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 768,
+                "thumb_1024_h": 1024,
+                "image_exif_rotation": 1,
+                "original_w": 4032,
+                "original_h": 3024,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U7007DAE8\/FERUZSEH2\/image_from_ios.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FERUZSEH2-444460e5fb"
+            }
+        ],
+        "upload": true,
+        "user": "U7007DAE8",
+        "display_as_bot": false,
+        "upload_reply_to": "1BCFA986-C783-4585-910C-85317E6F9E8F",
+        "ts": "1544631201.221900",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "",
+        "files": [
+            {
+                "id": "FESJ31UER",
+                "created": 1544644993,
+                "timestamp": 1544644993,
+                "name": "IMG_20181212_120249.jpg",
+                "title": "IMG_20181212_120249.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U385QFFCN",
+                "editable": false,
+                "size": 2394388,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESJ31UER\/img_20181212_120249.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESJ31UER\/download\/img_20181212_120249.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESJ31UER-3b55eb2605\/img_20181212_120249_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESJ31UER-3b55eb2605\/img_20181212_120249_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESJ31UER-3b55eb2605\/img_20181212_120249_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 175,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESJ31UER-3b55eb2605\/img_20181212_120249_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 233,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESJ31UER-3b55eb2605\/img_20181212_120249_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESJ31UER-3b55eb2605\/img_20181212_120249_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 350,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESJ31UER-3b55eb2605\/img_20181212_120249_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1646,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESJ31UER-3b55eb2605\/img_20181212_120249_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 467,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESJ31UER-3b55eb2605\/img_20181212_120249_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 498,
+                "thumb_1024_h": 1024,
+                "image_exif_rotation": 1,
+                "original_w": 4032,
+                "original_h": 1960,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U385QFFCN\/FESJ31UER\/img_20181212_120249.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FESJ31UER-77d6ce5a66"
+            }
+        ],
+        "upload": true,
+        "user": "U385QFFCN",
+        "display_as_bot": false,
+        "ts": "1544645002.222300",
+        "client_msg_id": "dad6ea34-c08f-40a5-8ed3-08fb08379361"
+    },
+    {
+        "client_msg_id": "aacac035-0198-4844-8d0d-f9ee5828cfab",
+        "type": "message",
+        "text": "[12-4] I messed around with some ideas for improving the lift - notably reassembleing the whole thing because it was not assembled straight. However, in the interest of time, I did not try to rebuild everything, instead, I filed some areas to make them smoother and to keep them from catching during movement. For this process I used a rasp to take off material, and then a (rat something or other) file to smooth and bevel the edges.",
+        "user": "UCPS85G87",
+        "ts": "1544665272.227800",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "036a3a01-0fec-412d-a158-45495bc096b5",
+        "type": "message",
+        "text": "[12-11] I spent too much time struggling with my chopped finger and lock nuts, but ended up with a functional part thing. I managed to almost finish the part - all that remains to be done is to attach a second piece of L stock and stick an axle with wheels through. ",
+        "user": "UCPS85G87",
+        "ts": "1544665612.233500",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "db93296a-68b6-49c0-af0b-913d223178ea",
+        "type": "message",
+        "text": "[11-30] the whole team went into frantic assembly mode. I helped put together some of the good hook be attached to the lift, but we realised it wasn't ready enough. So, we will have to try to finish during competition something. Then we packed as much as we could in preparation for competition.",
+        "user": "UCPS85G87",
+        "ts": "1544665954.238900",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "6d9e331d-9bf1-4ecf-9b4e-090304e6bfd1",
+        "type": "message",
+        "text": "[12-2] competition!!!! I got to be a mechanic on deck and our productivity as a team compared to other days *skyrocketed* . I worked with Daniel on a number of things, including:\nMaking a socket wrench which could fit into a tube, because normal ones did not fit. This was accomplished by hacksawing a thin piece of metal so it had a square indentation at the end, then filling out to size. Also, the tables were made of plastic, so the clamps were nearly useless. Instead, I figured we could clamp the parts in the vice, whereupon I would clamp the vice with my hands. \nWe also attached the lift string to the pulley system, and at the end, we had an untensioned lift! Sadly it wasn't used in the matches. We also attached the hook, using copious amounts of duct tape and a hammer. We also needed to shorten a section which could not be hacksawed, so, we cold chiseled it! Afterwards there was a mock judging session which I went to.",
+        "user": "UCPS85G87",
+        "ts": "1544667000.249600",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b88a28ba-6531-436d-8d15-b9da860d1c11",
+        "type": "message",
+        "text": "[12-7]I continued to work on the part I started and made some solid progress. Due to one handed wishing difficulties, I have to clamp most of the tools in a vice to use them, e.g. a file, pliers, spanner, etc. Because of this,  I ended up using the vice on the milling machine, so as not to get in the way of people with more serious need for real vices. Otherwise, work progressed smoothly, but I had to detach and reattach a part at a 90 degree angle rotation.",
+        "user": "UCPS85G87",
+        "ts": "1544667682.256800",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fd632afb-c69b-42fd-8990-0a241fbee721",
+        "type": "message",
+        "text": "[12-6] I started work on a part - Basically, when the lift is used and the robot goes up\/down, the side facing the lander goes BONK. Sad faces all around and bad for electronics. To combat this, I noticed that an actobotics piece could be jammed onto a motor and from this I expanded with a thing on top and a brace on the side. Cue difficulties due to 0.95 thumb",
+        "user": "UCPS85G87",
+        "ts": "1544667706.257100",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "056f30a6-8ed7-4270-9464-b7b7771ca6aa",
+        "type": "message",
+        "text": "[comment] I might not have time to write up documentation for [12-7] or [12-11], but I hear the notebook is being finalized soon so here's some photos at least",
+        "user": "U38LT451T",
+        "ts": "1544670688.257900"
+    },
+    {
+        "client_msg_id": "35f0b728-a135-4e10-887f-b85093df8946",
+        "type": "message",
+        "text": "[comment] I might be able to do [12-9], tbd",
+        "user": "U38LT451T",
+        "ts": "1544670747.258300"
+    },
+    {
+        "type": "message",
+        "text": "[12-9] Daniel works on retentioning the lift after the string acts up (again)",
+        "files": [
+            {
+                "id": "FETNFJFCP",
+                "created": 1544670775,
+                "timestamp": 1544670775,
+                "name": "IMG_20181209_121103.jpg",
+                "title": "IMG_20181209_121103.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U38LT451T",
+                "editable": false,
+                "size": 3403269,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FETNFJFCP\/img_20181209_121103.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FETNFJFCP\/download\/img_20181209_121103.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFJFCP-2efddb0c8b\/img_20181209_121103_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFJFCP-2efddb0c8b\/img_20181209_121103_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFJFCP-2efddb0c8b\/img_20181209_121103_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 360,
+                "thumb_360_h": 270,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFJFCP-2efddb0c8b\/img_20181209_121103_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 480,
+                "thumb_480_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFJFCP-2efddb0c8b\/img_20181209_121103_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFJFCP-2efddb0c8b\/img_20181209_121103_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 720,
+                "thumb_720_h": 540,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFJFCP-2efddb0c8b\/img_20181209_121103_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 600,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFJFCP-2efddb0c8b\/img_20181209_121103_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 960,
+                "thumb_960_h": 720,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFJFCP-2efddb0c8b\/img_20181209_121103_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 768,
+                "image_exif_rotation": 1,
+                "original_w": 4048,
+                "original_h": 3036,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U38LT451T\/FETNFJFCP\/img_20181209_121103.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FETNFJFCP-0b092eaf3d"
+            }
+        ],
+        "upload": true,
+        "user": "U38LT451T",
+        "display_as_bot": false,
+        "ts": "1544670782.258400",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "[12-9] Daniel works on assembling and fixing the lift, while Alex considers spacers for the 12788 bot",
+        "files": [
+            {
+                "id": "FETNFTK1V",
+                "created": 1544670817,
+                "timestamp": 1544670817,
+                "name": "IMG_20181209_122146.jpg",
+                "title": "IMG_20181209_122146.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U38LT451T",
+                "editable": false,
+                "size": 3702448,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FETNFTK1V\/img_20181209_122146.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FETNFTK1V\/download\/img_20181209_122146.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFTK1V-9e64c5716e\/img_20181209_122146_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFTK1V-9e64c5716e\/img_20181209_122146_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFTK1V-9e64c5716e\/img_20181209_122146_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 360,
+                "thumb_360_h": 270,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFTK1V-9e64c5716e\/img_20181209_122146_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 480,
+                "thumb_480_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFTK1V-9e64c5716e\/img_20181209_122146_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFTK1V-9e64c5716e\/img_20181209_122146_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 720,
+                "thumb_720_h": 540,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFTK1V-9e64c5716e\/img_20181209_122146_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 600,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFTK1V-9e64c5716e\/img_20181209_122146_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 960,
+                "thumb_960_h": 720,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FETNFTK1V-9e64c5716e\/img_20181209_122146_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 768,
+                "image_exif_rotation": 1,
+                "original_w": 4048,
+                "original_h": 3036,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U38LT451T\/FETNFTK1V\/img_20181209_122146.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FETNFTK1V-a0a63b18e2"
+            }
+        ],
+        "upload": true,
+        "user": "U38LT451T",
+        "display_as_bot": false,
+        "ts": "1544670824.258800",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "[12-9] These parts were meant to be the same length",
+        "files": [
+            {
+                "id": "FERUNFXGQ",
+                "created": 1544670827,
+                "timestamp": 1544670827,
+                "name": "IMG_20181209_122215.jpg",
+                "title": "IMG_20181209_122215.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U38LT451T",
+                "editable": false,
+                "size": 3169741,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FERUNFXGQ\/img_20181209_122215.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FERUNFXGQ\/download\/img_20181209_122215.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNFXGQ-227123cfa3\/img_20181209_122215_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNFXGQ-227123cfa3\/img_20181209_122215_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNFXGQ-227123cfa3\/img_20181209_122215_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 360,
+                "thumb_360_h": 270,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNFXGQ-227123cfa3\/img_20181209_122215_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 480,
+                "thumb_480_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNFXGQ-227123cfa3\/img_20181209_122215_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNFXGQ-227123cfa3\/img_20181209_122215_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 720,
+                "thumb_720_h": 540,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNFXGQ-227123cfa3\/img_20181209_122215_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 600,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNFXGQ-227123cfa3\/img_20181209_122215_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 960,
+                "thumb_960_h": 720,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNFXGQ-227123cfa3\/img_20181209_122215_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 768,
+                "image_exif_rotation": 1,
+                "original_w": 4048,
+                "original_h": 3036,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U38LT451T\/FERUNFXGQ\/img_20181209_122215.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FERUNFXGQ-98a925b195"
+            }
+        ],
+        "upload": true,
+        "user": "U38LT451T",
+        "display_as_bot": false,
+        "ts": "1544670833.259200",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "[12-9] The 12788 bot, in progress",
+        "files": [
+            {
+                "id": "FESHXFB8T",
+                "created": 1544670838,
+                "timestamp": 1544670838,
+                "name": "IMG_20181209_125340.jpg",
+                "title": "IMG_20181209_125340.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U38LT451T",
+                "editable": false,
+                "size": 3562888,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESHXFB8T\/img_20181209_125340.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESHXFB8T\/download\/img_20181209_125340.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXFB8T-c21705ab4a\/img_20181209_125340_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXFB8T-c21705ab4a\/img_20181209_125340_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXFB8T-c21705ab4a\/img_20181209_125340_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 360,
+                "thumb_360_h": 270,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXFB8T-c21705ab4a\/img_20181209_125340_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 480,
+                "thumb_480_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXFB8T-c21705ab4a\/img_20181209_125340_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXFB8T-c21705ab4a\/img_20181209_125340_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 720,
+                "thumb_720_h": 540,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXFB8T-c21705ab4a\/img_20181209_125340_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 600,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXFB8T-c21705ab4a\/img_20181209_125340_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 960,
+                "thumb_960_h": 720,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXFB8T-c21705ab4a\/img_20181209_125340_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 768,
+                "image_exif_rotation": 1,
+                "original_w": 4048,
+                "original_h": 3036,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U38LT451T\/FESHXFB8T\/img_20181209_125340.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FESHXFB8T-bf65e65f7a"
+            }
+        ],
+        "upload": true,
+        "user": "U38LT451T",
+        "display_as_bot": false,
+        "ts": "1544670844.259600",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "[12-9] Tesfa, in a moment of genius, getting a spacer stuck on a rat-tail file",
+        "files": [
+            {
+                "id": "FESHXL6AX",
+                "created": 1544670861,
+                "timestamp": 1544670861,
+                "name": "IMG_20181209_132502_1.jpg",
+                "title": "IMG_20181209_132502_1.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U38LT451T",
+                "editable": false,
+                "size": 4120679,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESHXL6AX\/img_20181209_132502_1.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESHXL6AX\/download\/img_20181209_132502_1.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXL6AX-fa2558995f\/img_20181209_132502_1_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXL6AX-fa2558995f\/img_20181209_132502_1_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXL6AX-fa2558995f\/img_20181209_132502_1_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 360,
+                "thumb_360_h": 270,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXL6AX-fa2558995f\/img_20181209_132502_1_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 480,
+                "thumb_480_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXL6AX-fa2558995f\/img_20181209_132502_1_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXL6AX-fa2558995f\/img_20181209_132502_1_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 720,
+                "thumb_720_h": 540,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXL6AX-fa2558995f\/img_20181209_132502_1_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 600,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXL6AX-fa2558995f\/img_20181209_132502_1_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 960,
+                "thumb_960_h": 720,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESHXL6AX-fa2558995f\/img_20181209_132502_1_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 768,
+                "image_exif_rotation": 1,
+                "original_w": 4048,
+                "original_h": 3036,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U38LT451T\/FESHXL6AX\/img_20181209_132502_1.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FESHXL6AX-091058277a"
+            }
+        ],
+        "upload": true,
+        "user": "U38LT451T",
+        "display_as_bot": false,
+        "ts": "1544670869.260000",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "[12-9] Angelina files a spacer for the 12788 robot",
+        "files": [
+            {
+                "id": "FESLYP78A",
+                "created": 1544670873,
+                "timestamp": 1544670873,
+                "name": "IMG_20181209_141730.jpg",
+                "title": "IMG_20181209_141730.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U38LT451T",
+                "editable": false,
+                "size": 3740101,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESLYP78A\/img_20181209_141730.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESLYP78A\/download\/img_20181209_141730.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESLYP78A-d5cc1080a9\/img_20181209_141730_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESLYP78A-d5cc1080a9\/img_20181209_141730_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESLYP78A-d5cc1080a9\/img_20181209_141730_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 360,
+                "thumb_360_h": 270,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESLYP78A-d5cc1080a9\/img_20181209_141730_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 480,
+                "thumb_480_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESLYP78A-d5cc1080a9\/img_20181209_141730_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESLYP78A-d5cc1080a9\/img_20181209_141730_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 720,
+                "thumb_720_h": 540,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESLYP78A-d5cc1080a9\/img_20181209_141730_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 600,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESLYP78A-d5cc1080a9\/img_20181209_141730_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 960,
+                "thumb_960_h": 720,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESLYP78A-d5cc1080a9\/img_20181209_141730_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 768,
+                "image_exif_rotation": 1,
+                "original_w": 4048,
+                "original_h": 3036,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U38LT451T\/FESLYP78A\/img_20181209_141730.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FESLYP78A-dc7cc0982d"
+            }
+        ],
+        "upload": true,
+        "user": "U38LT451T",
+        "display_as_bot": false,
+        "ts": "1544670882.260400",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "[12-9] 12788 breaking a bearing (how? nobody knows)",
+        "files": [
+            {
+                "id": "FERUNTNU8",
+                "created": 1544670885,
+                "timestamp": 1544670885,
+                "name": "IMG_20181209_151248.jpg",
+                "title": "IMG_20181209_151248.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U38LT451T",
+                "editable": false,
+                "size": 3048308,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FERUNTNU8\/img_20181209_151248.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FERUNTNU8\/download\/img_20181209_151248.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNTNU8-45eba02524\/img_20181209_151248_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNTNU8-45eba02524\/img_20181209_151248_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNTNU8-45eba02524\/img_20181209_151248_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 270,
+                "thumb_360_h": 360,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNTNU8-45eba02524\/img_20181209_151248_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 360,
+                "thumb_480_h": 480,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNTNU8-45eba02524\/img_20181209_151248_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNTNU8-45eba02524\/img_20181209_151248_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 540,
+                "thumb_720_h": 720,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNTNU8-45eba02524\/img_20181209_151248_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 1067,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNTNU8-45eba02524\/img_20181209_151248_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 720,
+                "thumb_960_h": 960,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FERUNTNU8-45eba02524\/img_20181209_151248_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 768,
+                "thumb_1024_h": 1024,
+                "image_exif_rotation": 1,
+                "original_w": 3036,
+                "original_h": 4048,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U38LT451T\/FERUNTNU8\/img_20181209_151248.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FERUNTNU8-96439544a2"
+            }
+        ],
+        "upload": true,
+        "user": "U38LT451T",
+        "display_as_bot": false,
+        "ts": "1544670893.260800",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "[12-11] Votes for the 4042 robot name! The final name chosen was \"Pointless\" (yes, that's a pun), with :b: a close runner-up",
+        "files": [
+            {
+                "id": "FESG078LC",
+                "created": 1544670931,
+                "timestamp": 1544670931,
+                "name": "IMG_20181211_161544.jpg",
+                "title": "IMG_20181211_161544.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U38LT451T",
+                "editable": false,
+                "size": 2780676,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESG078LC\/img_20181211_161544.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FESG078LC\/download\/img_20181211_161544.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESG078LC-41e7775933\/img_20181211_161544_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESG078LC-41e7775933\/img_20181211_161544_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESG078LC-41e7775933\/img_20181211_161544_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 360,
+                "thumb_360_h": 270,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESG078LC-41e7775933\/img_20181211_161544_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 480,
+                "thumb_480_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESG078LC-41e7775933\/img_20181211_161544_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESG078LC-41e7775933\/img_20181211_161544_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 720,
+                "thumb_720_h": 540,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESG078LC-41e7775933\/img_20181211_161544_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 600,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESG078LC-41e7775933\/img_20181211_161544_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 960,
+                "thumb_960_h": 720,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FESG078LC-41e7775933\/img_20181211_161544_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 768,
+                "image_exif_rotation": 1,
+                "original_w": 4048,
+                "original_h": 3036,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U38LT451T\/FESG078LC\/img_20181211_161544.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FESG078LC-6257e12d50"
+            }
+        ],
+        "upload": true,
+        "user": "U38LT451T",
+        "display_as_bot": false,
+        "ts": "1544670938.261200",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "text": "[12-11] I work on testing the lift code, while Gautham checks his Kalman filter code",
+        "files": [
+            {
+                "id": "FEU3C8FL6",
+                "created": 1544670953,
+                "timestamp": 1544670953,
+                "name": "IMG_20181211_175857.jpg",
+                "title": "IMG_20181211_175857.jpg",
+                "mimetype": "image\/jpeg",
+                "filetype": "jpg",
+                "pretty_type": "JPEG",
+                "user": "U38LT451T",
+                "editable": false,
+                "size": 3414563,
+                "mode": "hosted",
+                "is_external": false,
+                "external_type": "",
+                "is_public": true,
+                "public_url_shared": false,
+                "display_as_bot": false,
+                "username": "",
+                "url_private": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FEU3C8FL6\/img_20181211_175857.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "url_private_download": "https:\/\/files.slack.com\/files-pri\/T37DR7S2G-FEU3C8FL6\/download\/img_20181211_175857.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FEU3C8FL6-b946efa70e\/img_20181211_175857_64.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FEU3C8FL6-b946efa70e\/img_20181211_175857_80.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FEU3C8FL6-b946efa70e\/img_20181211_175857_360.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_360_w": 360,
+                "thumb_360_h": 270,
+                "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FEU3C8FL6-b946efa70e\/img_20181211_175857_480.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_480_w": 480,
+                "thumb_480_h": 360,
+                "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FEU3C8FL6-b946efa70e\/img_20181211_175857_160.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FEU3C8FL6-b946efa70e\/img_20181211_175857_720.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_720_w": 720,
+                "thumb_720_h": 540,
+                "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FEU3C8FL6-b946efa70e\/img_20181211_175857_800.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_800_w": 800,
+                "thumb_800_h": 600,
+                "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FEU3C8FL6-b946efa70e\/img_20181211_175857_960.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_960_w": 960,
+                "thumb_960_h": 720,
+                "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T37DR7S2G-FEU3C8FL6-b946efa70e\/img_20181211_175857_1024.jpg?t=xoxe-109467264084-510380964311-509327581458-5bcf24c4e3c87504e0b4c309d3fa831f",
+                "thumb_1024_w": 1024,
+                "thumb_1024_h": 768,
+                "image_exif_rotation": 1,
+                "original_w": 4048,
+                "original_h": 3036,
+                "permalink": "https:\/\/garfieldrobotics.slack.com\/files\/U38LT451T\/FEU3C8FL6\/img_20181211_175857.jpg",
+                "permalink_public": "https:\/\/slack-files.com\/T37DR7S2G-FEU3C8FL6-d4348fb53d"
+            }
+        ],
+        "upload": true,
+        "user": "U38LT451T",
+        "display_as_bot": false,
+        "ts": "1544670960.261600",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "b69ea06b-0a76-4c20-bc5e-1fd8e861f21d",
+        "type": "message",
+        "text": "[12-9] (Summary) Today was our last weekend meeting before interleague! Makes me nervous, but excited. After loading everything into Daniel's garage, we set to work. The primary focus of 4042 was getting the lift working, while 12788 was hoping to get some flaws in their drive base ironed out.\n\nDaniel was the only 4042 mechanic in attendance, so he was working on the lift for most of the time. It took multiple hours to get the lift coils spooled correctly around the ratchet, mostly due to the difficulty of the task and the pancaking of important ratchet parts. During this time, I worked on developing our lift code and testing it in a very limited fashion.\n\nOnce the ratchet had been spooled correctly, Daniel went to work on intake CAD and I tested it in teleop. It seemed to function well, admittedly with some creaking and stretching from the newly installed springs. I then tried to test the lift code by lifting the robot in the air and running the lift. The first time I did, the robot made a loud bang noise, all tension in the lift vanished, and the robot hit the floor (not very hard, though). Upon inspection, I realized the lift cable had snapped. We will almost certainly be ordering paracord to replace that cabling. For now, Daniel came back to fix the lift cable. I did some basic packing up of software stuff, and then had to depart.\n\nLater, we learned our drill driver was missing. We're still unsure as to the cause, but we clearly do not own one any more. A new one has been ordered.",
+        "user": "U38LT451T",
+        "ts": "1544671284.267200",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "27afd1e9-8dbb-4c4d-9d35-64c0ef56b124",
+        "type": "message",
+        "text": "[comment] I killed that bearing in order to get it off of the axle to put on a spacer lmao",
+        "user": "U76J56P0E",
+        "ts": "1544672534.268600"
+    },
+    {
+        "client_msg_id": "1243425f-b7c1-4ddc-bb11-2df8d522f804",
+        "type": "message",
+        "text": "[comment] Congratulations :D",
+        "user": "U38LT451T",
+        "ts": "1544673040.268900"
+    },
+    {
+        "client_msg_id": "7a5cbdbc-2488-40d2-b0d0-ca41bd3cca7c",
+        "type": "message",
+        "text": "[comment] I keep checking this channel, tabbing away once I'm done reading, half remembering seeing my name (despite that it would be highlighted were it said) and having to come back and confirm you said spacer instead.",
+        "user": "U6Z8TCJAU",
+        "ts": "1544673613.270200",
+        "edited": {
+            "user": "U6Z8TCJAU",
+            "ts": "1544673629.000000"
+        },
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W",
+                    "U38LT451T"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "client_msg_id": "9d9a96ef-4bfa-414a-b075-cf7c06c294ed",
+        "type": "message",
+        "text": "[comment] I fucked up the comment formatting and put a } not a ]",
+        "user": "U6Z8TCJAU",
+        "ts": "1544673655.270900"
+    },
+    {
+        "client_msg_id": "738f32b2-aa72-4990-bea6-5025f035cd3d",
+        "type": "message",
+        "text": "[11-9] Mostly a work day for CAD as well as some planning on the proof of concept for the whole surgical tube spinner thing I think I know how I want to build it but we'll see. The CAD seems to be falling a bit behind (maybe because the whole robot is a bit behind) so we'll just have to see how it goes.",
+        "user": "UCU6LCATU",
+        "ts": "1544674286.273700",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "65977e74-6947-4d57-aaaf-8e71c9f36e39",
+        "type": "message",
+        "text": "[11-13] I finished the Proof of concept but slept late and forgot it in my rush to get to school (I live over an hour away by bus). Ill bring it Thursday for sure most of the day was again working on the CAD which is going ok still behind considering the deadline is Thursday so I don't think we'll make it. Another concern is while the CAD works I don't know how healthy it is neither me nor Adam or even Jaden have a deep understanding of Inventor so we kind of just try a lot of things and keep the ones that work so hopefully that won't be a problem later on.",
+        "user": "UCU6LCATU",
+        "ts": "1544674583.278800",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "a1b590d9-d5fc-42a5-bf20-429818e26934",
+        "type": "message",
+        "text": "[11-15] I remembered the proof of concept but the adhesive I used for the surgical tube was weaker than expected so I spent I lot of time covering the whole thing in hot glue. Whenever it wasn't broken we were actually able to test it on some minerals and we concluded that we would be able to proceed as planned but also that we should fix the attachment of the tubes obviously as well as stiffer tubing to be more effective  because while it worked 45 degrees is still fairly steep in my opinion. (we could also just change the dustbin.)",
+        "user": "UCU6LCATU",
+        "ts": "1544674952.283400",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "3a3f4bb0-26b4-476d-a74d-fbf4972ab945",
+        "type": "message",
+        "text": "[11-16] Back to CAD today frantically working because we are past the deadline and NOT ready to build at all trying to make the intake look complete even if it's not really construction ready at the end of the day it's still not ready but at least we don't really need it for a little bit at least.",
+        "user": "UCU6LCATU",
+        "ts": "1544675287.286900",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "8a6ea04d-387c-42b2-a58f-3b37f0413601",
+        "type": "message",
+        "text": "[11-20] More work on CAD to me it seems as we get closer and closer the progress gets slower and slower which could of a product of all the bad CAD we made early on when we didn't really know how to CAD catching up to us (not that we experts now). either way Jaden finally changed the dustbin so it's not 16in which meant me and Adam had to adjust a bunch of other stuff to fit.",
+        "user": "UCU6LCATU",
+        "ts": "1544675589.291100",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "a825b8d4-fbeb-44d8-a881-2eb3d0619867",
+        "type": "message",
+        "text": "[11-27] Still struggling to finish the intake (that will be a reoccurring theme) not aided by the fact that Jaden was preoccupied with driver tryouts or training or something either way it appears we have left all the most difficult stuff for last so progress was not excellent. I had to make an account on a CAD sharing website just to download the CAD for the omni wheels and then they ended up in a zipped folder with a bunch of other similarly named stuff which Adam and I had to sift through to actually get what we wanted",
+        "user": "UCU6LCATU",
+        "ts": "1544676271.295500",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "180b25bf-c519-4965-be28-dbdc35e1016a",
+        "type": "message",
+        "text": "[11-29] Jaden left to assemble the lift which unsurprisingly had a negative impact on CAD progress Me and Adam worked on some boring CAD stuff after that which wasn't particularly memorable or important never the less progress continues. mostly refining stuff attaching wheels and slides as well as struggling to deal with Jaden's intake which was made in the beginning of the year and has many problems namely that it is currently impossible to manufacture as it has some infinitely small connections in it so we should probably replace that.",
+        "user": "UCU6LCATU",
+        "ts": "1544676742.297200",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "FDE676CB-9ABD-4994-B10F-E70B5E46AADA",
+        "type": "message",
+        "text": "Lol",
+        "user": "U75P2QJH2",
+        "ts": "1544676779.297500",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "5719be63-5d7c-4707-a03c-bc9149be9633",
+        "type": "message",
+        "text": "dont worry its all being done on time",
+        "user": "UCU6LCATU",
+        "ts": "1544676808.297900",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "3cc80b6e-8298-4788-b2d4-025280449ebf",
+        "type": "message",
+        "text": "[11-30] Jaden still absent from the CAD team me and Adam still attempting to make progress and generally struggling with Inventor perhaps the most productive thing I did was help with packing so that just goes to show how well the intake is going. I'm growing kind of concerned considering we haven't started intake production and were already at league 2.",
+        "user": "UCU6LCATU",
+        "ts": "1544677024.300500",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "0B8BEEE4-DD21-456D-B83F-AF57C09D09C5",
+        "type": "message",
+        "text": "Lol",
+        "user": "U75P2QJH2",
+        "ts": "1544677040.300800",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "bcd46531-fd17-46b8-9228-8671bc8357c7",
+        "type": "message",
+        "text": "[12-2] I was at the competition (of course) it was cool to see how much progress other teams made a little and depressing how little progress 4042 made. Completely unrelated I hope to get a laptop soon which should be able to run inventor so I can work on it at home. (my family's computer is actually not powerful enough for even the minimum requirements for Inventor.)",
+        "user": "UCU6LCATU",
+        "ts": "1544677239.304000",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "733f182b-eb9a-4076-b85f-8017e2a3340c",
+        "type": "message",
+        "text": "[12-4] Daniel started to help save the intake and wow there are a lot of problems the only hope now is to 3D print but if we can do that we might have like a 5% chance of being ready for the competition which is actually an improvement. For real though this might actually work.",
+        "user": "UCU6LCATU",
+        "ts": "1544677467.306900",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "6EFC7B72-BBC3-4982-BDCB-EEC6A9FDB8D7",
+        "type": "message",
+        "text": "Dude these are sad",
+        "user": "U75P2QJH2",
+        "ts": "1544677545.308100",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "0c5f1ad8-e98b-41eb-8293-941aac0a2337",
+        "type": "message",
+        "text": "[12-6] Daniel redesigned the whole system and did an astonishingly good job (I don't even know to do half the stuff on what he CADed). After he presented the new plan me and Jaden agreed that it was probably much better than what we had. It did need some optimizational tweaks but we were confident we could handle those.",
+        "user": "UCU6LCATU",
+        "ts": "1544677678.310200",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "1b5b39ec-7fbe-4a4d-80fb-68ac780c903c",
+        "type": "message",
+        "text": "better than nothing",
+        "user": "UCU6LCATU",
+        "ts": "1544677701.310800",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "2191f913-d88c-458b-bada-71fb06b207a3",
+        "type": "message",
+        "text": "and be careful I based most of them off of your's",
+        "user": "UCU6LCATU",
+        "ts": "1544677717.311300",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "49AC05DE-3730-4CA6-88EE-75F4DB959B34",
+        "type": "message",
+        "text": "Uh... those are nothing like my amazing documentation :)",
+        "user": "U75P2QJH2",
+        "ts": "1544677818.313700",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "a0cba4ae-7f70-4622-ab4f-705d457cb0de",
+        "type": "message",
+        "text": "[12-7] Daniel did even more work and at this point, I don't know if he ever sleeps regardless he fixed all minor errors and addressed the main concern which was the spinning surgical tube being in the way of the sliding dustbin. Me and Jaden just added and constrained the actual tube now that it was accounted for.",
+        "user": "UCU6LCATU",
+        "ts": "1544677888.315100",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "581cabef-2f3c-4527-9f96-0a35fea2d46a",
+        "type": "message",
+        "text": "Done",
+        "user": "UCU6LCATU",
+        "ts": "1544678129.318800",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "fa6eb62f-4eb3-4a65-9356-d45deeb057d2",
+        "type": "message",
+        "text": "[12-11] Spent most time figuring out how to power the surgical tube (basically just the placement for the motor.) and how to attach the motor to the rest of the intake this took most of the time as we changed the design significantly after Jaden talked to Daniel. At this point the intake CAD is Done. (maybe???)",
+        "user": "UCU6LCATU",
+        "ts": "1544678333.319200",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "6f0c7182-fe19-4b4e-a50b-6e1ba0c01aea",
+        "type": "message",
+        "text": "Now actually done",
+        "user": "UCU6LCATU",
+        "ts": "1544678351.319600",
+        "reactions": [
+            {
+                "name": "error",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "client_msg_id": "9c5efb3c-0bbc-424f-8b87-2633dc5b972e",
+        "type": "message",
+        "text": "[12-11] today a soldered a new ultrasonic and finally got readings. I realized that the ultrasonic s error when stationary is tiny. This means that I will need to find the error when moving since the error is negligible when still. I will do this using the fact that the sensor readings should be linear so I'll preform linear regression on the readings for 100 values (or however many it takes) while the robot is running some distance. Then I will find the sum of the residuals and preform and average them to approximate \"standard deviation\" in the sensor readings. Then I'll test whether the actual filter is working lol. Lesgo!",
+        "user": "U77PFKQQM",
+        "ts": "1544683239.324400",
+        "reactions": [
+            {
+                "name": "heavy_check_mark",
+                "users": [
+                    "UDCG9J17W"
+                ],
+                "count": 1
+            }
+        ]
+    }
+]
