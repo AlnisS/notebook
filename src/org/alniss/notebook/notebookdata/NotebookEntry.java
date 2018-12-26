@@ -23,9 +23,13 @@ public class NotebookEntry {
     void formatSlackEntries() {
         if (slackEntries.size() == 0)
             return;
-        formattedSlackEntries = slackEntries.get(0).text;
+        formattedSlackEntries = cleanString(slackEntries.get(0).text);
         for (int i = 1; i < slackEntries.size(); i++)
-            formattedSlackEntries += " -message break- " + slackEntries.get(i).text;
+            formattedSlackEntries += " -message break- " + cleanString(slackEntries.get(i).text);
+    }
+
+    public static String cleanString(String string) {
+        return string.replaceAll("(" + SlackEntry.dateRegex + "|\\[cont\\])", "").trim();
     }
 
     void compileEntries(SlackEntry[] context, int entry) {
@@ -33,8 +37,7 @@ public class NotebookEntry {
         slackFiles = new HashMap<>();
 
         for (int i = entry; i < context.length
-                && (i == entry || context[i].extractDocDate() == null || context[i].user != this.author.id);
-                i++) {
+                && (i == entry || context[i].extractDocDate() == null || context[i].user != this.author.id); i++) {
             SlackEntry currentEntry = context[i];
 
             if (currentEntry.user.equals(this.author.id))

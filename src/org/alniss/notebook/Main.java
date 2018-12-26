@@ -15,7 +15,8 @@ public class Main {
         NotebookDataManager notebookDataManager = new NotebookDataManager();
         //notebookDataManager.printData();
         for (NotebookEntry notebookEntry : notebookDataManager.notebookEntries) {
-            System.out.println(notebookEntry.formattedSlackEntries);
+            System.out.println(notebookEntry.formattedSlackEntries + "\n- " + notebookEntry.author.real_name
+                    + " (" + notebookEntry.docDay.toString().substring(0, 10) + ")");
         }
     }
 }

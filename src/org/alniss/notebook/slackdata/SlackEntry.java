@@ -12,6 +12,7 @@ public class SlackEntry {
     public String ts;
     public String client_msg_id;
     public SlackFile[] files;
+    public static final String dateRegex = "\\[(\\d|\\d\\d)\\-(\\d|\\d\\d)\\]";
 
     /* JSON template
     {
@@ -34,7 +35,7 @@ public class SlackEntry {
 
     public Date extractDocDate() {
         //TODO: add explicit year too
-        Pattern pattern = Pattern.compile("\\[(\\d|\\d\\d)\\-(\\d|\\d\\d)\\]");
+        Pattern pattern = Pattern.compile(dateRegex);
         Matcher matcher = pattern.matcher(text);
         String dateString = null;
 
