@@ -66,3 +66,9 @@ fastlane/readme.md
 
 # private data
 data/users.json
+
+# LaTeX files
+data/latex/notebook.aux
+data/latex/notebook.log
+data/latex/notebook.synctex.gz
+data/latex/notebook.pdf

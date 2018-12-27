@@ -6,12 +6,14 @@ import org.alniss.notebook.slackdata.SlackUser;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class NotebookDataManager {
     //public File messageFile = new File(System.getProperty("user.dir") + "\\data\\2018-12-12.json");
     public File messageFile = new File(System.getProperty("user.dir") + "\\data\\testdata.json");
     public File userFile = new File(System.getProperty("user.dir") + "\\data\\users.json");
+    public File latexFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.tex");
 
     public SlackEntry[] slackEntries;
     public SlackUser[] users;
@@ -82,13 +84,29 @@ public class NotebookDataManager {
         return userMap;
     }
 
-    public void printData() {
-        for (SlackEntry entry : slackEntries) {
-            if (entry.files != null && entry.files.length != 0)
-                System.out.print(entry.files[0].id + " ");
-            System.out.println(entry.type + " " + userMap.get(entry.user).real_name + " "
-                    + entry.ts + " " + entry.text);
-            System.out.println(entry.extractDocDate());
+    public void printEntries() {
+        for (NotebookDay notebookDay : notebookDays)
+            notebookDay.printEntries();
+    }
+
+    public void createLatex() {
+        try (PrintWriter printWriter = new PrintWriter(latexFile))
+        {
+            printWriter.println("\\documentclass{article}" +
+                    "\n\\title{Notebook Entries}" +
+                    "\n\\begin{document}" +
+                    "\n\\maketitle\n");
+            for (NotebookDay notebookDay : notebookDays) {
+                printWriter.println("\\section{" + notebookDay.date.toString().substring(0, 10) + "}");
+                for (NotebookEntry notebookEntry : notebookDay.notebookEntries)
+                    printWriter.println("\\paragraph{entry:} " + notebookEntry.formattedSlackEntries
+                            + " \\textbf{-" + notebookEntry.author.real_name + "}");
+            }
+            printWriter.println("\\end{document}");
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
+
     }
 }

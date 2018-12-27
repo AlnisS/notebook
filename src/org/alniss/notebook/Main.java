@@ -12,7 +12,7 @@ public class Main {
         //System.out.println("\n");
 
         NotebookDataManager notebookDataManager = new NotebookDataManager();
-        for (NotebookDay notebookDay : notebookDataManager.notebookDays)
-            notebookDay.printEntries();
+        notebookDataManager.printEntries();
+        notebookDataManager.createLatex();
     }
 }
