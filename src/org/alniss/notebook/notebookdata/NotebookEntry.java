@@ -12,6 +12,8 @@ public class NotebookEntry {
     public SlackUser author;
     public Date docDay;
     public String formattedSlackEntries;
+    public static final String ENTRY_START_STRING = "\t";
+    public static final String MESSAGE_SEPARATOR_STRING = "\n\t";
 
     public NotebookEntry(SlackEntry[] context, int entry, Map<String, SlackUser> users) {
         author = users.get(context[entry].user);
@@ -23,9 +25,9 @@ public class NotebookEntry {
     void formatSlackEntries() {
         if (slackEntries.size() == 0)
             return;
-        formattedSlackEntries = cleanString(slackEntries.get(0).text);
+        formattedSlackEntries = ENTRY_START_STRING + cleanString(slackEntries.get(0).text);
         for (int i = 1; i < slackEntries.size(); i++)
-            formattedSlackEntries += " -message break- " + cleanString(slackEntries.get(i).text);
+            formattedSlackEntries += MESSAGE_SEPARATOR_STRING + cleanString(slackEntries.get(i).text);
     }
 
     public static String cleanString(String string) {
@@ -36,10 +38,6 @@ public class NotebookEntry {
         slackEntries = new ArrayList<>();
         slackFiles = new HashMap<>();
 
-        for (SlackEntry slackEntry : context)
-            System.out.println(slackEntry.text);
-        System.out.println(entry);
-
         for (int i = entry; i < context.length
                 && (i == entry
                 || !context[i].isStart()
@@ -49,10 +47,6 @@ public class NotebookEntry {
             if (currentEntry.user.equals(this.author.id))
                 addData(currentEntry);
         }
-
-        for (SlackEntry slackEntry : slackEntries)
-            System.out.println(slackEntry.text);
-        System.out.println("\n");
     }
 
     void addData(SlackEntry currentEntry) {

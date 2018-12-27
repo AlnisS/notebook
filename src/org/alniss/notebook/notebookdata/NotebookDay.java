@@ -13,8 +13,10 @@ public class NotebookDay {
     }
 
     public void printEntries() {
-        System.out.println("doumentation day: " + date.toString().substring(0, 10));
+        System.out.println("documentation day: " + date.toString().substring(0, 10));
+        int i = 0;
         for (NotebookEntry notebookEntry : notebookEntries)
-            System.out.println("| " + notebookEntry.formattedSlackEntries + "\n| - " + notebookEntry.author.real_name);
+            System.out.println("entry " + i++ + ":\n"
+                    + notebookEntry.formattedSlackEntries + "\n\t\t- " + notebookEntry.author.real_name + "\n");
     }
 }
