@@ -33,6 +33,10 @@ public class SlackEntry {
         this.files = null;
     }
 
+    public boolean isStart() {
+        return extractDocDate() != null;
+    }
+
     public Date extractDocDate() {
         //TODO: add explicit year too
         Pattern pattern = Pattern.compile(dateRegex);

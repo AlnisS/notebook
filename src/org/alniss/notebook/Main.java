@@ -1,8 +1,7 @@
 package org.alniss.notebook;
 
 import org.alniss.notebook.notebookdata.NotebookDataManager;
-import org.alniss.notebook.notebookdata.NotebookEntry;
-import org.alniss.notebook.slackdata.SlackEntry;
+import org.alniss.notebook.notebookdata.NotebookDay;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,10 +12,7 @@ public class Main {
         //System.out.println("\n");
 
         NotebookDataManager notebookDataManager = new NotebookDataManager();
-        //notebookDataManager.printData();
-        for (NotebookEntry notebookEntry : notebookDataManager.notebookEntries) {
-            System.out.println(notebookEntry.formattedSlackEntries + "\n- " + notebookEntry.author.real_name
-                    + " (" + notebookEntry.docDay.toString().substring(0, 10) + ")");
-        }
+        for (NotebookDay notebookDay : notebookDataManager.notebookDays)
+            notebookDay.printEntries();
     }
 }

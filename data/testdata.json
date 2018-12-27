@@ -33,5 +33,19 @@
         "text": "[cont] as a second test of the system",
         "user": "U38M4GQEQ",
         "ts": "1544626427.221200"
+    },
+    {
+        "client_msg_id": "",
+        "type": "message",
+        "text": "[10-9] second documentation test",
+        "user": "U75P2QJH2",
+        "ts": "1544626427.221200"
+    },
+    {
+        "client_msg_id": "",
+        "type": "message",
+        "text": "[10-9] second person documentation test",
+        "user": "U38M4GQEQ",
+        "ts": "1544626427.221200"
     }
 ]

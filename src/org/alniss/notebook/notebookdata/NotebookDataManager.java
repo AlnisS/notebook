@@ -20,22 +20,36 @@ public class NotebookDataManager {
     public SlackUser[] users;
     public Map<String, SlackUser> userMap;
 
-    public List<NotebookEntry> notebookEntries;
+    public NotebookEntry[] notebookEntries;
+    public NotebookDay[] notebookDays;
 
     public NotebookDataManager() {
         users = loadUsers(userFile);
         userMap = generateUserMap(users);
         slackEntries = loadEntries(messageFile);
         notebookEntries = createNotebookEntries(slackEntries, userMap);
+        notebookDays = generateNotebookDays(notebookEntries);
     }
 
-    public static List<NotebookEntry> createNotebookEntries(SlackEntry[] context, Map<String, SlackUser> users) {
+    public static NotebookDay[] generateNotebookDays(NotebookEntry[] notebookEntries) {
+        Map<String, NotebookDay> arrangedNotebookDays = new HashMap<>();
+        for (NotebookEntry notebookEntry : notebookEntries) {
+            String id = notebookEntry.docDay.toString().substring(0, 10);
+            if (arrangedNotebookDays.get(id) == null)
+                arrangedNotebookDays.put(id, new NotebookDay());
+            arrangedNotebookDays.get(id).notebookEntries.add(notebookEntry);
+            arrangedNotebookDays.get(id).date = notebookEntry.docDay;
+        }
+        return arrangedNotebookDays.values().toArray(new NotebookDay[arrangedNotebookDays.size()]);
+    }
+
+    public static NotebookEntry[] createNotebookEntries(SlackEntry[] context, Map<String, SlackUser> users) {
         List<NotebookEntry> notebookEntries = new ArrayList<>();
         for (int i = 0; i < context.length; i++) {
             if (context[i].extractDocDate() != null)
                 notebookEntries.add(new NotebookEntry(context, i, users));
         }
-        return notebookEntries;
+        return notebookEntries.toArray(new NotebookEntry[notebookEntries.size()]);
     }
 
     public static SlackEntry[] loadEntries(File messageFile) {

@@ -36,13 +36,23 @@ public class NotebookEntry {
         slackEntries = new ArrayList<>();
         slackFiles = new HashMap<>();
 
+        for (SlackEntry slackEntry : context)
+            System.out.println(slackEntry.text);
+        System.out.println(entry);
+
         for (int i = entry; i < context.length
-                && (i == entry || context[i].extractDocDate() == null || context[i].user != this.author.id); i++) {
+                && (i == entry
+                || !context[i].isStart()
+                || (context[i].isStart() && !context[i].user.equals(this.author.id))); i++) {
             SlackEntry currentEntry = context[i];
 
             if (currentEntry.user.equals(this.author.id))
                 addData(currentEntry);
         }
+
+        for (SlackEntry slackEntry : slackEntries)
+            System.out.println(slackEntry.text);
+        System.out.println("\n");
     }
 
     void addData(SlackEntry currentEntry) {
