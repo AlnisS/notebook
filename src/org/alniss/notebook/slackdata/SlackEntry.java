@@ -1,9 +1,8 @@
 package org.alniss.notebook.slackdata;
 
-import java.util.Calendar;
+import org.alniss.notebook.slackdata.taggedstring.TaggedString;
+
 import java.util.Date;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class SlackEntry {
     public String type;
@@ -13,6 +12,7 @@ public class SlackEntry {
     public String client_msg_id;
     public SlackFile[] files;
     public static final String dateRegex = "\\[(\\d|\\d\\d)\\-(\\d|\\d\\d)\\]";
+    public TaggedString taggedString;
 
     /* JSON template
     {
@@ -33,30 +33,19 @@ public class SlackEntry {
         this.files = null;
     }
 
+    public void tagString() {
+        taggedString = new TaggedString(text);
+    }
+
     public boolean isStart() {
-        return extractDocDate() != null;
+        return taggedString.tagValues.containsKey("date0");
     }
 
     public Date extractDocDate() {
-        //TODO: add explicit year too
-        Pattern pattern = Pattern.compile(dateRegex);
-        Matcher matcher = pattern.matcher(text);
-        String dateString = null;
-
-        if (matcher.find())
-            dateString = matcher.group();
-        else return null;
-
-        int month = Integer.parseInt(dateString.substring(1, dateString.indexOf("-")));
-        int day = Integer.parseInt(dateString.substring(dateString.indexOf("-") + 1, dateString.indexOf("]")));
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(calendar.get(Calendar.YEAR), month - 1, day);
-        if (!calendar.before(Calendar.getInstance()))  //TODO: make this logic dependent on explicit season start
-            calendar.set(Calendar.YEAR, calendar.get(Calendar.YEAR) - 1);
-        return calendar.getTime();
+        return (Date) taggedString.tagValues.get("date0");
     }
 
     public boolean isDocumentation() {
-        return text.indexOf("[cont]") != -1 || extractDocDate() != null;
+        return taggedString.tagValues.containsKey("cont0") || taggedString.tagValues.containsKey("date0");
     }
 }

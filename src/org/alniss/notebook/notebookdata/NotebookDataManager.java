@@ -6,10 +6,7 @@ import org.alniss.notebook.slackdata.SlackUser;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class NotebookDataManager {
     //public File messageFile = new File(System.getProperty("user.dir") + "\\data\\2018-12-12.json");
@@ -22,6 +19,7 @@ public class NotebookDataManager {
 
     public NotebookEntry[] notebookEntries;
     public NotebookDay[] notebookDays;
+    public static final Date seasonStart = new Date(new Date().getYear() - 1, 9 - 1, 3);
 
     public NotebookDataManager() {
         users = loadUsers(userFile);
@@ -60,6 +58,8 @@ public class NotebookDataManager {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        for (SlackEntry slackEntry : entries)
+            slackEntry.tagString();
         return entries;
     }
 
