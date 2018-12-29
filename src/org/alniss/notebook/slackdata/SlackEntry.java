@@ -38,14 +38,14 @@ public class SlackEntry {
     }
 
     public boolean isStart() {
-        return taggedString.tagValues.containsKey("date0");
+        return taggedString.hasTag("date0");
     }
 
     public Date extractDocDate() {
-        return (Date) taggedString.tagValues.get("date0");
+        return (Date) taggedString.getTagValue("date0");
     }
 
     public boolean isDocumentation() {
-        return taggedString.tagValues.containsKey("cont0") || taggedString.tagValues.containsKey("date0");
+        return taggedString.hasTag("cont0") || taggedString.hasTag("date0");
     }
 }

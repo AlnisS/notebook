@@ -73,3 +73,6 @@ data/latex/notebook.log
 data/latex/notebook.synctex.gz
 data/latex/notebook.pdf
 data/latex/notebook.tex
+
+# javadoc
+doc/

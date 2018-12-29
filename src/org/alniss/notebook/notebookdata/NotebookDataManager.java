@@ -4,13 +4,16 @@ import com.google.gson.Gson;
 import org.alniss.notebook.slackdata.SlackEntry;
 import org.alniss.notebook.slackdata.SlackUser;
 
+import java.awt.*;
 import java.io.*;
+import java.util.List;
 import java.util.*;
 
 public class NotebookDataManager {
     public File messageFile = new File(System.getProperty("user.dir") + "\\data\\testdata.json");
     public File userFile = new File(System.getProperty("user.dir") + "\\data\\users.json");
     public File latexFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.tex");
+    public File latexPDFFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.pdf");
 
     public SlackEntry[] slackEntries;
     public SlackUser[] users;
@@ -125,5 +128,13 @@ public class NotebookDataManager {
             e.printStackTrace();
         }
 
+    }
+
+    public void openLatexPDF() {
+        try {
+            Desktop.getDesktop().open(latexPDFFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

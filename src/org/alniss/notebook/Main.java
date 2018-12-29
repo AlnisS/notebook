@@ -8,5 +8,6 @@ public class Main {
         notebookDataManager.printEntries();
         notebookDataManager.createLatex();
         notebookDataManager.compileLatex();
+        notebookDataManager.openLatexPDF();
     }
 }
