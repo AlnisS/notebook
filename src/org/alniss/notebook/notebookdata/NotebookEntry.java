@@ -30,10 +30,6 @@ public class NotebookEntry {
             formattedSlackEntries += MESSAGE_SEPARATOR_STRING + slackEntries.get(i).taggedString.processedString;
     }
 
-    public static String cleanString(String string) {
-        return string.replaceAll("(" + SlackEntry.dateRegex + "|\\[cont\\])", "").trim();
-    }
-
     void compileEntries(SlackEntry[] context, int entry) {
         slackEntries = new ArrayList<>();
         slackFiles = new HashMap<>();

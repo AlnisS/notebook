@@ -8,7 +8,6 @@ import java.io.*;
 import java.util.*;
 
 public class NotebookDataManager {
-    //public File messageFile = new File(System.getProperty("user.dir") + "\\data\\2018-12-12.json");
     public File messageFile = new File(System.getProperty("user.dir") + "\\data\\testdata.json");
     public File userFile = new File(System.getProperty("user.dir") + "\\data\\users.json");
     public File latexFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.tex");
