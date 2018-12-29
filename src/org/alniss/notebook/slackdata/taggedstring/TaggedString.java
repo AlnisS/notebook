@@ -2,9 +2,7 @@ package org.alniss.notebook.slackdata.taggedstring;
 
 import org.alniss.notebook.notebookdata.NotebookDataManager;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,9 +22,11 @@ public class TaggedString {
                 public Object getValue(String tag) {
                     int month = Integer.parseInt(tag.substring(0, tag.indexOf("-")));
                     int day = Integer.parseInt(tag.substring(tag.indexOf("-") + 1));
-                    Date result = new Date(new Date().getYear() - 1, month - 1, day);
+                    int year = Calendar.getInstance().get(Calendar.YEAR);
+
+                    Date result = new GregorianCalendar(year - 1, month - 1, day).getTime(); //new Date(new Date().getYear() - 1, month - 1, day);
                     if (result.before(NotebookDataManager.seasonStart))
-                        result.setYear(result.getYear() + 1);
+                        result = new GregorianCalendar(year, month - 1, day).getTime();
                     return result;
                 }
 

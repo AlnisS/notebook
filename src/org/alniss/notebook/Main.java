@@ -1,7 +1,6 @@
 package org.alniss.notebook;
 
 import org.alniss.notebook.notebookdata.NotebookDataManager;
-import org.alniss.notebook.notebookdata.NotebookDay;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,5 +13,6 @@ public class Main {
         NotebookDataManager notebookDataManager = new NotebookDataManager();
         notebookDataManager.printEntries();
         notebookDataManager.createLatex();
+        notebookDataManager.compileLatex();
     }
 }

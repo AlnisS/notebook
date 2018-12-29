@@ -4,9 +4,7 @@ import com.google.gson.Gson;
 import org.alniss.notebook.slackdata.SlackEntry;
 import org.alniss.notebook.slackdata.SlackUser;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.*;
 
 public class NotebookDataManager {
@@ -21,7 +19,7 @@ public class NotebookDataManager {
 
     public NotebookEntry[] notebookEntries;
     public NotebookDay[] notebookDays;
-    public static final Date seasonStart = new Date(new Date().getYear() - 1, 9 - 1, 3);
+    public static final Date seasonStart = new GregorianCalendar(2018, Calendar.SEPTEMBER, 3).getTime();
 
     public NotebookDataManager() {
         users = loadUsers(userFile);
@@ -106,6 +104,26 @@ public class NotebookDataManager {
 
         } catch (Exception ex) {
             ex.printStackTrace();
+        }
+    }
+
+    public void compileLatex() {
+        try {
+            String folder = latexFile.getAbsolutePath();
+            folder = folder.substring(0, folder.length() - "notebook.tex".length());
+            ProcessBuilder builder = new ProcessBuilder(
+                    "cmd.exe", "/c", "cd \"" + folder + "\" && pdflatex notebook.tex");
+            builder.redirectErrorStream(true);
+            Process p = builder.start();
+            BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String line;
+            while (true) {
+                line = r.readLine();
+                if (line == null) { break; }
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
