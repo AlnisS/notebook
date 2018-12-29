@@ -25,9 +25,9 @@ public class NotebookEntry {
     void formatSlackEntries() {
         if (slackEntries.size() == 0)
             return;
-        formattedSlackEntries = ENTRY_START_STRING + cleanString(slackEntries.get(0).text);
+        formattedSlackEntries = ENTRY_START_STRING + slackEntries.get(0).taggedString.processedString;
         for (int i = 1; i < slackEntries.size(); i++)
-            formattedSlackEntries += MESSAGE_SEPARATOR_STRING + cleanString(slackEntries.get(i).text);
+            formattedSlackEntries += MESSAGE_SEPARATOR_STRING + slackEntries.get(i).taggedString.processedString;
     }
 
     public static String cleanString(String string) {

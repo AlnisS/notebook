@@ -1,6 +1,7 @@
 package org.alniss.notebook;
 
 import org.alniss.notebook.notebookdata.NotebookDataManager;
+import org.alniss.notebook.slackdata.taggedstring.TaggedString;
 
 public class Main {
     public static void main(String[] args) {

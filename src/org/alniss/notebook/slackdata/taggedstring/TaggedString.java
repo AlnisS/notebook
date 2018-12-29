@@ -78,7 +78,7 @@ public class TaggedString {
                 String tagString = matcher.group();
                 tagString = tagString.substring(1, tagString.length() - 1);
                 tagValues.put(tag.getName() + i++, tag.getValue(tagString));
-                processedString.replaceFirst(tagRegex, tag.getReplacement(tagString));
+                processedString = processedString.replaceFirst(tagRegex, tag.getReplacement(tagString)).trim();
             }
         }
     }
