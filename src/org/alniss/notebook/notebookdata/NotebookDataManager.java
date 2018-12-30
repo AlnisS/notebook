@@ -92,15 +92,21 @@ public class NotebookDataManager {
     public void createLatex() {
         try (PrintWriter printWriter = new PrintWriter(latexFile))
         {
-            printWriter.println("\\documentclass{article}" +
+            printWriter.println("\\documentclass[11pt]{article}" +
+                    "\n\\usepackage[letterpaper, portrait, margin=.5in]{geometry}" +
+                    "\n\\usepackage{tabularx}" +
                     "\n\\title{Notebook Entries}" +
                     "\n\\begin{document}" +
                     "\n\\maketitle\n");
             for (NotebookDay notebookDay : notebookDays) {
                 printWriter.println("\\section{" + notebookDay.date.toString().substring(0, 10) + "}");
+                printWriter.println("\n\\begin{tabularx}{\\textwidth}{ | p{1in} | X |}" +
+                        "\n\\hline");
                 for (NotebookEntry notebookEntry : notebookDay.notebookEntries)
-                    printWriter.println("\\paragraph{entry:} " + notebookEntry.formattedSlackEntries
-                            + " \\textbf{-" + notebookEntry.author.real_name + "}");
+                    printWriter.println("\\textbf{entry} &" + notebookEntry.formattedSlackEntries
+                            + " \\textbf{-" + notebookEntry.author.real_name + "}" +
+                            " \\\\ \\hline\n");
+                printWriter.println("\\end{tabularx}");
             }
             printWriter.println("\\end{document}");
 
