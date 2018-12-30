@@ -76,6 +76,48 @@ public class TaggedString {
                 public String getName() {
                     return "cont";
                 }
+            },
+            new Tag() {
+                @Override
+                public String getInnerRegex() {
+                    return "ms \\d\\d:\\d\\d";
+                }
+
+                @Override
+                public Object getValue(String tag) {
+                    return new int[] {Integer.parseInt(tag.substring(3, 5)), Integer.parseInt(tag.substring(6, 8))};
+                }
+
+                @Override
+                public String getReplacement(String tag) {
+                    return "";
+                }
+
+                @Override
+                public String getName() {
+                    return "ms";
+                }
+            },
+            new Tag() {
+                @Override
+                public String getInnerRegex() {
+                    return "me \\d\\d:\\d\\d";
+                }
+
+                @Override
+                public Object getValue(String tag) {
+                    return new int[] {Integer.parseInt(tag.substring(3, 5)), Integer.parseInt(tag.substring(6, 8))};
+                }
+
+                @Override
+                public String getReplacement(String tag) {
+                    return "";
+                }
+
+                @Override
+                public String getName() {
+                    return "me";
+                }
             }
     };
 

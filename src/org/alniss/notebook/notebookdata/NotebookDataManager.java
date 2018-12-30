@@ -32,6 +32,7 @@ public class NotebookDataManager {
     }
 
     public static NotebookDay[] generateNotebookDays(NotebookEntry[] notebookEntries) {
+        //TODO: make this less janky
         Map<String, NotebookDay> arrangedNotebookDays = new HashMap<>();
         for (NotebookEntry notebookEntry : notebookEntries) {
             String id = notebookEntry.docDay.toString().substring(0, 10);
@@ -39,6 +40,7 @@ public class NotebookDataManager {
                 arrangedNotebookDays.put(id, new NotebookDay());
             arrangedNotebookDays.get(id).notebookEntries.add(notebookEntry);
             arrangedNotebookDays.get(id).date = notebookEntry.docDay;
+            arrangedNotebookDays.get(id).initTimesIfApplicable();
         }
         return arrangedNotebookDays.values().toArray(new NotebookDay[arrangedNotebookDays.size()]);
     }
@@ -99,7 +101,9 @@ public class NotebookDataManager {
                     "\n\\begin{document}" +
                     "\n\\maketitle\n");
             for (NotebookDay notebookDay : notebookDays) {
-                printWriter.println("\\section{" + notebookDay.date.toString().substring(0, 10) + "}");
+                String section = notebookDay.date.toString().substring(0, 10);
+                section += ", start " + notebookDay.startTime + ", end " + notebookDay.endTime;
+                printWriter.println("\\section{" + section + "}");
                 printWriter.println("\n\\begin{tabularx}{\\textwidth}{ | p{1in} | X |}" +
                         "\n\\hline");
                 for (NotebookEntry notebookEntry : notebookDay.notebookEntries)
