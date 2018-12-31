@@ -25,7 +25,7 @@ public class LatexHolder {
                         + bold("-" + notebookEntry.author.real_name));
                 hline();
             }
-            LatexConnector.begintabularx();
+            endtabularx();
         }
         end("document");
     }

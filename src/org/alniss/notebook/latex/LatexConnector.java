@@ -49,7 +49,7 @@ public class LatexConnector {
             latexOut.print(" & " + args[i]);
         latexOut.println(" \\\\");
     }
-    public static void begintabularx() {
+    public static void endtabularx() {
         latexOut.println("\\end{tabularx}");
     }
     public static void end(String type) {
