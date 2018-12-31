@@ -4,9 +4,8 @@ import com.google.gson.Gson;
 import org.alniss.notebook.slackdata.SlackEntry;
 import org.alniss.notebook.slackdata.SlackUser;
 
-import java.awt.*;
-import java.io.*;
-import java.util.List;
+import java.io.File;
+import java.io.FileReader;
 import java.util.*;
 
 public class NotebookDataManager {
@@ -29,6 +28,12 @@ public class NotebookDataManager {
         slackEntries = loadEntries(messageFile);
         notebookEntries = createNotebookEntries(slackEntries, userMap);
         notebookDays = generateNotebookDays(notebookEntries);
+        sortDayEntries(notebookDays);
+    }
+
+    public static void sortDayEntries(NotebookDay[] notebookDays) {
+        for (NotebookDay day : notebookDays)
+            day.sortEntries();
     }
 
     public static NotebookDay[] generateNotebookDays(NotebookEntry[] notebookEntries) {

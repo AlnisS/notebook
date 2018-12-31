@@ -55,6 +55,9 @@ public class LatexConnector {
     public static void end(String type) {
         latexOut.println("\\end{" + type + "}");
     }
+    public static void multirow(int rows, String width, String text) {
+        latexOut.print("\\multirow{" + rows + "}[" + rows * 2 + "]{" + width + "}{" + text + "}");
+    }
     public static String bold(String text) {
         return "\\textbf{" + text + "}";
     }

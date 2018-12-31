@@ -122,6 +122,28 @@ public class TaggedString {
                 public String getName() {
                     return "me";
                 }
+            },
+            //  subsection
+            new Tag() {
+                @Override
+                public String getInnerRegex() {
+                    return "sub (.*)";
+                }
+
+                @Override
+                public Object getValue(String tag) {
+                    return tag.substring(4);
+                }
+
+                @Override
+                public String getReplacement(String tag) {
+                    return "";
+                }
+
+                @Override
+                public String getName() {
+                    return "sub";
+                }
             }
     };
 

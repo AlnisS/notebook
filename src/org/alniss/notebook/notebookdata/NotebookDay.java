@@ -1,13 +1,10 @@
 package org.alniss.notebook.notebookdata;
 
-import org.alniss.notebook.slackdata.SlackEntry;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class NotebookDay {
     public List<NotebookEntry> notebookEntries;
+    public Map<String, NotebookSubsection> subsections;
     public Date date;
 
     public int[] start, end;
@@ -18,12 +15,18 @@ public class NotebookDay {
         notebookEntries = new ArrayList<>();
     }
 
+    public void sortEntries() {
+        subsections = new HashMap<>();
+        NotebookSubsection.sort(notebookEntries, subsections);
+    }
+
     public void printEntries() {
         System.out.println("documentation day: " + date.toString().substring(0, 10));
         int i = 0;
-        for (NotebookEntry notebookEntry : notebookEntries)
-            System.out.println("entry " + i++ + ":\n"
-                    + notebookEntry.formattedSlackEntries + "\n\t\t- " + notebookEntry.author.real_name + "\n");
+        for (NotebookSubsection subsection : subsections.values())
+            for (NotebookEntry notebookEntry : subsection.getNotebookEntries())
+                System.out.println("entry " + i++ + " " + subsection.getName() + ":\n"
+                        + notebookEntry.formattedSlackEntries + "\n\t\t- " + notebookEntry.author.real_name + "\n");
     }
 
     public void initStartTime() {
