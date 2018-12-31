@@ -23,12 +23,12 @@ public class LatexHolder {
             String section = notebookDay.date.toString().substring(0, 10);
             section += ", start " + notebookDay.startTime + ", end " + notebookDay.endTime;
             section(section);
-            begintabularx("| p{1.75in} | X |");
+            begintabularx("| p{1in} | X |");
             for (String subsection : notebookDay.subsections.keySet()) {
                 hline();
                 NotebookSubsection notebookSubsection = notebookDay.subsections.get(subsection);
                 List<NotebookEntry> notebookEntries = notebookSubsection.getNotebookEntries();
-                multirow(notebookSubsection.entryCount(), "1.75in", bold(subsection));
+                multirow(notebookSubsection.entryCount(), "1in", bold(subsection));
                 latexOut.println(" & " + notebookEntries.get(0).formattedSlackEntries
                         + bold(" -" + notebookEntries.get(0).author.real_name) + "\\\\\\cline{2-2}");
                 for (int i = 1; i < notebookEntries.size(); i++) {

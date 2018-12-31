@@ -44,7 +44,14 @@
     {
         "client_msg_id": "",
         "type": "message",
-        "text": "[10-9] [sub additional notebook testing] second person documentation test",
+        "text": "[10-9] [sub additional notebook testing] third documentation test",
+        "user": "U75P2QJH2",
+        "ts": "1544626427.221200"
+    },
+    {
+        "client_msg_id": "",
+        "type": "message",
+        "text": "[10-9] [sub notebook testing] second person documentation test",
         "user": "U38M4GQEQ",
         "ts": "1544626427.221200"
     },
