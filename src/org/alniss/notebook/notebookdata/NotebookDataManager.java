@@ -10,10 +10,10 @@ import java.util.List;
 import java.util.*;
 
 public class NotebookDataManager {
-    public File messageFile = new File(System.getProperty("user.dir") + "\\data\\testdata.json");
-    public File userFile = new File(System.getProperty("user.dir") + "\\data\\users.json");
-    public File latexFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.tex");
-    public File latexPDFFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.pdf");
+    public static File messageFile = new File(System.getProperty("user.dir") + "\\data\\testdata.json");
+    public static File userFile = new File(System.getProperty("user.dir") + "\\data\\users.json");
+    public static File latexFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.tex");
+    public static File latexPDFFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.pdf");
 
     public SlackEntry[] slackEntries;
     public SlackUser[] users;
@@ -89,62 +89,5 @@ public class NotebookDataManager {
     public void printEntries() {
         for (NotebookDay notebookDay : notebookDays)
             notebookDay.printEntries();
-    }
-
-    public void createLatex() {
-        try (PrintWriter printWriter = new PrintWriter(latexFile))
-        {
-            printWriter.println("\\documentclass[11pt]{article}" +
-                    "\n\\usepackage[letterpaper, portrait, margin=.5in]{geometry}" +
-                    "\n\\usepackage{tabularx}" +
-                    "\n\\title{Notebook Entries}" +
-                    "\n\\begin{document}" +
-                    "\n\\maketitle\n");
-            for (NotebookDay notebookDay : notebookDays) {
-                String section = notebookDay.date.toString().substring(0, 10);
-                section += ", start " + notebookDay.startTime + ", end " + notebookDay.endTime;
-                printWriter.println("\\section{" + section + "}");
-                printWriter.println("\n\\begin{tabularx}{\\textwidth}{ | p{1in} | X |}" +
-                        "\n\\hline");
-                for (NotebookEntry notebookEntry : notebookDay.notebookEntries)
-                    printWriter.println("\\textbf{entry} &" + notebookEntry.formattedSlackEntries
-                            + " \\textbf{-" + notebookEntry.author.real_name + "}" +
-                            " \\\\ \\hline\n");
-                printWriter.println("\\end{tabularx}");
-            }
-            printWriter.println("\\end{document}");
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    public void compileLatex() {
-        try {
-            String folder = latexFile.getAbsolutePath();
-            folder = folder.substring(0, folder.length() - "notebook.tex".length());
-            ProcessBuilder builder = new ProcessBuilder(
-                    "cmd.exe", "/c", "cd \"" + folder + "\" && pdflatex notebook.tex");
-            builder.redirectErrorStream(true);
-            Process p = builder.start();
-            BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            String line;
-            while (true) {
-                line = r.readLine();
-                if (line == null) { break; }
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public void openLatexPDF() {
-        try {
-            Desktop.getDesktop().open(latexPDFFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
