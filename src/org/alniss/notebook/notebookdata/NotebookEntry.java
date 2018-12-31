@@ -63,4 +63,34 @@ public class NotebookEntry {
             }
         }
     }
+
+    public List<Boolean> hasTag(String tag) {
+        List<Boolean> result = new ArrayList<>();
+        for (SlackEntry entry : slackEntries)  //TODO: check whether this is safe
+            result.add(entry.taggedString.hasTag(tag));
+        return result;
+    }
+
+    public List<Object> getTagValue(String tag) {
+        List<Object> result = new ArrayList<>();
+        for (SlackEntry entry : slackEntries)
+            result.add(entry.taggedString.getTagValue(tag));
+        return result;
+    }
+
+    public boolean anyHasTag(String tag) {
+        List<Boolean> hasTag = hasTag(tag);
+        for (Boolean b : hasTag)
+            if (b)
+                return true;
+        return false;
+    }
+
+    public Object anyGetTagValue(String tag) {
+        List<Object> tagValue = getTagValue(tag);
+        for (Object o : tagValue)
+            if (o != null)
+                return o;
+        return null;
+    }
 }

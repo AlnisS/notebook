@@ -32,7 +32,6 @@ public class LatexManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("foo");
     }
 
     public static void openLatexPDF() {

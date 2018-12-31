@@ -28,6 +28,7 @@ public class TaggedString {
     private Map<String, Object> tagValues;
 
     private static Tag[] allTags = new Tag[] {
+            //  meeting start date
             new Tag() {
                 @Override
                 public String getInnerRegex() {
@@ -56,6 +57,7 @@ public class TaggedString {
                     return "date";
                 }
             },
+            //  meeting continue
             new Tag() {
                 @Override
                 public String getInnerRegex() {
@@ -77,6 +79,7 @@ public class TaggedString {
                     return "cont";
                 }
             },
+            //  meeting start time
             new Tag() {
                 @Override
                 public String getInnerRegex() {
@@ -98,6 +101,7 @@ public class TaggedString {
                     return "ms";
                 }
             },
+            //  meeting end time
             new Tag() {
                 @Override
                 public String getInnerRegex() {
