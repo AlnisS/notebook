@@ -127,7 +127,7 @@ public class TaggedString {
             new Tag() {
                 @Override
                 public String getInnerRegex() {
-                    return "sub (.*)";
+                    return "sub [^\\]]+";
                 }
 
                 @Override
@@ -143,6 +143,34 @@ public class TaggedString {
                 @Override
                 public String getName() {
                     return "sub";
+                }
+            },
+            //  newline
+            new Tag() {
+                @Override
+                public String getInnerRegex() {
+                    return "(nl|nl \\d+)";
+                }
+
+                @Override
+                public Object getValue(String tag) {
+                    return null;
+                }
+
+                @Override
+                public String getReplacement(String tag) {
+                    if (tag.length() == 2)
+                        return "\\\\newline";
+                    int x = Integer.parseInt(tag.substring(3));
+                    String res = "";
+                    for (int i = 0; i < x; i++)
+                        res += "\\\\newline";
+                    return res;
+                }
+
+                @Override
+                public String getName() {
+                    return "nl";
                 }
             }
     };

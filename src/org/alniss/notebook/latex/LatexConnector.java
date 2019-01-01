@@ -55,19 +55,19 @@ public class LatexConnector {
     public static void end(String type) {
         latexOut.println("\\end{" + type + "}");
     }
-    public static void multirow(int rows, String width, String text) {
-        latexOut.print("\\multirow[t]{" + rows + "}{" + width + "}{" + text + "}");
-    }
     public static void entryrow(String entry, String author) {
         latexOut.println(" & " + entry + bold(" -" + author) + "\\\\\\cline{2-2}");
     }
     public static void header(String section, String time) {
         //TODO: this is really bad
-        latexOut.println("\\begin{tabularx}{\\textwidth}{| p{2in} | X  X  X  X  X  X |}\n" +
-                "\\multirow{3}{2in}[.3em]{$\\vcenter{\\includegraphics[width=2in]{logo2.png}}$} & \\multicolumn{4}{l}{\\textbf{\\huge{" + section + "}}} & \\multicolumn{2}{r|}{\\textbf{" + time + "}}\\\\\n" +
-                " & \\multicolumn{6}{l|}{\\textbf{\\Large{Some Title}}}\\\\\n" +
-                " & foo & bar & \\cellcolor{gray!25}\\textbf{biz} & baz & qux & qix\n" +
-                "\\end{tabularx}");
+        begintabularx("| p{2in} | X  X  X  X  X  X |");
+        tabularrow(multirow(3, "2in", "-1em",
+                "$\\vcenter{\\includegraphics[width=2in]{logo2.png}}$"),
+                multicolumn(4, "l", bold(style("huge", section))),
+                multicolumn(2, "r|", bold(time)));
+        tabularrow("", multicolumn(6, "l|", bold(style("Large", "Some Title"))));
+        tabularrow("", "foo", "bar", "\\cellcolor{gray!25}" + bold("biz"), "baz", "qux", "qix");
+        endtabularx();
     }
     public static void noindent() {
         latexOut.println("\\noindent");
@@ -83,7 +83,18 @@ public class LatexConnector {
     public static String bold(String text) {
         return "\\textbf{" + text + "}";
     }
-
+    public static String style(String style, String text) {
+        return "\\" + style + "{" + text + "}";
+    }
+    public static String multirow(int rows, String width, String text) {
+        return "\\multirow[t]{" + rows + "}{" + width + "}{" + text + "}";
+    }
+    public static String multirow(int rows, String width, String offset, String text) {
+        return "\\multirow[t]{" + rows + "}{" + width + "}[" + offset + "]{" + text + "}";
+    }
+    public static String multicolumn(int columns, String style, String text) {
+        return "\\multicolumn{" + columns + "}{" + style + "}{" + text + "}";
+    }
     public static void close() {
         latexOut.close();
     }

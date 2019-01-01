@@ -12,8 +12,8 @@ public class NotebookEntry {
     public SlackUser author;
     public Date docDay;
     public String formattedSlackEntries;
-    public static final String ENTRY_START_STRING = "\t";
-    public static final String MESSAGE_SEPARATOR_STRING = "\n\t";
+    public static final String ENTRY_START_STRING = "";
+    public static final String MESSAGE_SEPARATOR_STRING = " ";
 
     public NotebookEntry(SlackEntry[] context, int entry, Map<String, SlackUser> users) {
         author = users.get(context[entry].user);

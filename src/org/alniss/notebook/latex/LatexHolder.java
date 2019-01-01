@@ -19,7 +19,7 @@ public class LatexHolder {
 
         title("Notebook Entries");
         begin("document");
-        maketitle();
+        //maketitle();
 
         for (NotebookDay notebookDay : ndm.notebookDays) {
             //TODO: this is bad
@@ -36,13 +36,13 @@ public class LatexHolder {
                 hline();
                 NotebookSubsection notebookSubsection = notebookDay.subsections.get(subsection);
                 List<NotebookEntry> notebookEntries = notebookSubsection.getNotebookEntries();
-                multirow(notebookSubsection.entryCount(), "1in", bold(subsection));
+                latexOut.print(multirow(notebookSubsection.entryCount(), "1in", bold(subsection)));
                 for (NotebookEntry entry : notebookEntries)
                     entryrow(entry.formattedSlackEntries, entry.author.real_name);
             }
             hline();
             endtabularx();
-            linebreak(4);
+            linebreak(6);
         }
         end("document");
     }
