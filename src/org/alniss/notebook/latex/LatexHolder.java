@@ -29,13 +29,8 @@ public class LatexHolder {
                 NotebookSubsection notebookSubsection = notebookDay.subsections.get(subsection);
                 List<NotebookEntry> notebookEntries = notebookSubsection.getNotebookEntries();
                 multirow(notebookSubsection.entryCount(), "1in", bold(subsection));
-                latexOut.println(" & " + notebookEntries.get(0).formattedSlackEntries
-                        + bold(" -" + notebookEntries.get(0).author.real_name) + "\\\\\\cline{2-2}");
-                for (int i = 1; i < notebookEntries.size(); i++) {
-                    tabularrow("", notebookEntries.get(i).formattedSlackEntries
-                            + bold(" -" + notebookEntries.get(i).author.real_name));
-                    latexOut.println("\\cline{2-2}");
-                }
+                for (NotebookEntry entry : notebookEntries)
+                    entryrow(entry.formattedSlackEntries, entry.author.real_name);
             }
             hline();
             endtabularx();

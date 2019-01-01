@@ -56,7 +56,10 @@ public class LatexConnector {
         latexOut.println("\\end{" + type + "}");
     }
     public static void multirow(int rows, String width, String text) {
-        latexOut.print("\\multirow{" + rows + "}[" + rows * 2 + "]{" + width + "}{" + text + "}");
+        latexOut.print("\\multirow[t]{" + rows + "}{" + width + "}{" + text + "}");
+    }
+    public static void entryrow(String entry, String author) {
+        latexOut.println(" & " + entry + bold(" -" + author) + "\\\\\\cline{2-2}");
     }
     public static String bold(String text) {
         return "\\textbf{" + text + "}";
