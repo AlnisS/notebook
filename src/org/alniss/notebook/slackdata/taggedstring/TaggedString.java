@@ -172,6 +172,28 @@ public class TaggedString {
                 public String getName() {
                     return "nl";
                 }
+            },
+            //  title
+            new Tag() {
+                @Override
+                public String getInnerRegex() {
+                    return "title [^\\]]+";
+                }
+
+                @Override
+                public Object getValue(String tag) {
+                    return tag.substring(6);
+                }
+
+                @Override
+                public String getReplacement(String tag) {
+                    return "";
+                }
+
+                @Override
+                public String getName() {
+                    return "title";
+                }
             }
     };
 

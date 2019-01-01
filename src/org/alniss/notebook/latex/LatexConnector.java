@@ -58,14 +58,14 @@ public class LatexConnector {
     public static void entryrow(String entry, String author) {
         latexOut.println(" & " + entry + bold(" -" + author) + "\\\\\\cline{2-2}");
     }
-    public static void header(String section, String time) {
+    public static void header(String section, String time, String title) {
         //TODO: this is really bad
         begintabularx("| p{2in} | X  X  X  X  X  X |");
         tabularrow(multirow(3, "2in", "-1em",
                 "$\\vcenter{\\includegraphics[width=2in]{logo2.png}}$"),
                 multicolumn(4, "l", bold(style("huge", section))),
                 multicolumn(2, "r|", bold(time)));
-        tabularrow("", multicolumn(6, "l|", bold(style("Large", "Some Title"))));
+        tabularrow("", multicolumn(6, "l|", bold(style("Large", title))));
         tabularrow("", "foo", "bar", "\\cellcolor{gray!25}" + bold("biz"), "baz", "qux", "qix");
         endtabularx();
     }

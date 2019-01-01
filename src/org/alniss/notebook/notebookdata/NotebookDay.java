@@ -6,6 +6,7 @@ public class NotebookDay {
     public List<NotebookEntry> notebookEntries;
     public Map<String, NotebookSubsection> subsections;
     public Date date;
+    public String title = null;
 
     public int[] start, end;
     public String startTime = null;
@@ -13,6 +14,12 @@ public class NotebookDay {
 
     NotebookDay() {
         notebookEntries = new ArrayList<>();
+    }
+
+    public void setupTitle() {
+        if (!anyHasTag("title0"))
+            return;
+        title = (String) anyGetTagValue("title0");
     }
 
     public void sortEntries() {

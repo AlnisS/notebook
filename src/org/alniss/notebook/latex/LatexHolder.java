@@ -28,7 +28,7 @@ public class LatexHolder {
 
             //latexOut.println("\\pagebreak\n"); //uncomment to separate days into separate pages
             noindent();
-            header(section, time);
+            header(section, time, notebookDay.title);
             linebreak(3);
             begintabularx("p{1in} X");
 

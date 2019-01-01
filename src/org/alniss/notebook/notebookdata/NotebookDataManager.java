@@ -29,6 +29,12 @@ public class NotebookDataManager {
         notebookEntries = createNotebookEntries(slackEntries, userMap);
         notebookDays = generateNotebookDays(notebookEntries);
         sortDayEntries(notebookDays);
+        setupTitles(notebookDays);
+    }
+
+    public static void setupTitles(NotebookDay[] notebookDays) {
+        for (NotebookDay day : notebookDays)
+            day.setupTitle();
     }
 
     public static void sortDayEntries(NotebookDay[] notebookDays) {
