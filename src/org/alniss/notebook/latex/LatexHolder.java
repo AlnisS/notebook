@@ -14,6 +14,9 @@ public class LatexHolder {
         usepackage("letterpaper, portrait, margin=.5in", "geometry");
         usepackage("tabularx");
         usepackage("multirow");
+        usepackage("graphicx");
+        usepackage("table", "xcolor");
+
         title("Notebook Entries");
         begin("document");
         maketitle();
@@ -21,9 +24,14 @@ public class LatexHolder {
         for (NotebookDay notebookDay : ndm.notebookDays) {
             //TODO: this is bad
             String section = notebookDay.date.toString().substring(0, 10);
-            section += ", start " + notebookDay.startTime + ", end " + notebookDay.endTime;
-            section(section);
+            String time = notebookDay.startTime + " to " + notebookDay.endTime;
+
+            //latexOut.println("\\pagebreak\n"); //uncomment to separate days into separate pages
+            noindent();
+            header(section, time);
+            linebreak(3);
             begintabularx("| p{1in} | X |");
+
             for (String subsection : notebookDay.subsections.keySet()) {
                 hline();
                 NotebookSubsection notebookSubsection = notebookDay.subsections.get(subsection);
@@ -34,6 +42,7 @@ public class LatexHolder {
             }
             hline();
             endtabularx();
+            linebreak(4);
         }
         end("document");
     }

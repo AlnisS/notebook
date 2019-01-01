@@ -61,6 +61,25 @@ public class LatexConnector {
     public static void entryrow(String entry, String author) {
         latexOut.println(" & " + entry + bold(" -" + author) + "\\\\\\cline{2-2}");
     }
+    public static void header(String section, String time) {
+        //TODO: this is really bad
+        latexOut.println("\\begin{tabularx}{\\textwidth}{| p{2in} | X  X  X  X  X  X |}\n" +
+                "\\multirow{3}{2in}[.3em]{$\\vcenter{\\includegraphics[width=2in]{logo2.png}}$} & \\multicolumn{4}{l}{\\textbf{\\huge{" + section + "}}} & \\multicolumn{2}{r|}{\\textbf{" + time + "}}\\\\\n" +
+                " & \\multicolumn{6}{l|}{\\textbf{\\Large{Some Title}}}\\\\\n" +
+                " & foo & bar & \\cellcolor{gray!25}\\textbf{biz} & baz & qux & qix\n" +
+                "\\end{tabularx}");
+    }
+    public static void noindent() {
+        latexOut.println("\\noindent");
+    }
+    public static void linebreak() {
+        latexOut.println("\\linebreak");
+    }
+    public static void linebreak(int x) {
+        for (int i = 0; i < x; i++)
+            linebreak();
+    }
+
     public static String bold(String text) {
         return "\\textbf{" + text + "}";
     }
