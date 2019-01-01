@@ -30,7 +30,7 @@ public class LatexHolder {
             noindent();
             header(section, time);
             linebreak(3);
-            begintabularx("| p{1in} | X |");
+            begintabularx("p{1in} X");
 
             for (String subsection : notebookDay.subsections.keySet()) {
                 hline();
