@@ -3,16 +3,20 @@ package org.alniss.notebook.notebookdata;
 import com.google.gson.Gson;
 import org.alniss.notebook.slackdata.SlackEntry;
 import org.alniss.notebook.slackdata.SlackUser;
+import org.alniss.notebook.superentry.SuperEntryManager;
 
 import java.io.File;
 import java.io.FileReader;
 import java.util.*;
 
 public class NotebookDataManager {
-    public static File messageFile = new File(System.getProperty("user.dir") + "\\data\\testdata.json");
-    public static File userFile = new File(System.getProperty("user.dir") + "\\data\\users.json");
-    public static File latexFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.tex");
-    public static File latexPDFFile = new File(System.getProperty("user.dir") + "\\data\\latex\\notebook.pdf");
+    public static File messageFile = relativeFile("\\data\\testdata.json");
+    public static File messageFile2 = relativeFile("\\data\\testdata2.json");
+    public static File saveFile = relativeFile("\\data\\save.json");
+    public static File userFile = relativeFile("\\data\\users.json");
+    public static File latexFile = relativeFile("\\data\\latex\\notebook.tex");
+    public static File latexPDFFile = relativeFile("\\data\\latex\\notebook.pdf");
+
 
     public SlackEntry[] slackEntries;
     public SlackUser[] users;
@@ -21,11 +25,35 @@ public class NotebookDataManager {
     public NotebookEntry[] notebookEntries;
     public NotebookDay[] notebookDays;
     public static final Date seasonStart = new GregorianCalendar(2018, Calendar.SEPTEMBER, 3).getTime();
+    public SuperEntryManager superEntryManager;
 
     public NotebookDataManager() {
+        setupUserData();
+        loadAllEntries();
+        //prepareNotebookData();
+    }
+
+    public static File relativeFile(String path) {
+        return new File(System.getProperty("user.dir") + path);
+    }
+
+    private void loadAllEntries() {
+        superEntryManager = new SuperEntryManager();
+        superEntryManager.addSlackEntries(loadEntries(messageFile), userMap);
+        superEntryManager.addSlackEntries(loadEntries(messageFile2), userMap);
+    }
+
+    private void setupUserData() {
         users = loadUsers(userFile);
         userMap = generateUserMap(users);
-        slackEntries = loadEntries(messageFile);
+    }
+
+    public void battenTheHatches() {
+        slackEntries = superEntryManager.getAllAsSlackEntries();
+        prepareNotebookData();
+    }
+
+    private void prepareNotebookData() {
         notebookEntries = createNotebookEntries(slackEntries, userMap);
         notebookDays = generateNotebookDays(notebookEntries);
         sortDayEntries(notebookDays);

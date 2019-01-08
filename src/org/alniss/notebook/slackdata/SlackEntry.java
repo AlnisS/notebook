@@ -9,9 +9,7 @@ public class SlackEntry {
     public String text;
     public String user;
     public String ts;
-    public String client_msg_id;
     public SlackFile[] files;
-    public static final String dateRegex = "\\[(\\d|\\d\\d)\\-(\\d|\\d\\d)\\]";
     public TaggedString taggedString;
 
     /* JSON template
@@ -24,13 +22,12 @@ public class SlackEntry {
     }
      */
 
-    public SlackEntry(String text, String user) {
+    public SlackEntry(String text, String user, String ts) {
         this.type = "message";
         this.text = text;
         this.user = user;
-        this.ts = "";
-        this.client_msg_id = "";
-        this.files = null;
+        this.ts = ts;
+        tagString();
     }
 
     public void tagString() {

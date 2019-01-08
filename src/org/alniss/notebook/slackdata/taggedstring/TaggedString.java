@@ -25,7 +25,7 @@ import java.util.regex.Pattern;
 public class TaggedString {
     private String rawString;
     private String processedString;
-    private Map<String, Object> tagValues;
+    private transient Map<String, Object> tagValues;
 
     private static Tag[] allTags = new Tag[] {
             //  meeting start date
@@ -202,9 +202,13 @@ public class TaggedString {
      * @param rawString raw String to be processed and used.
      */
     public TaggedString(String rawString) {
-        tagValues = new HashMap<>();
         this.rawString = rawString;
         this.processedString = rawString;
+        initTagValues();
+    }
+
+    public void initTagValues() {
+        tagValues = new HashMap<>();
 
         for (Tag tag : allTags) {
             String tagRegex = "\\[" + tag.getInnerRegex() + "\\]";

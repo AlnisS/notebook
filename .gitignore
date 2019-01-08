@@ -76,3 +76,6 @@ data/latex/notebook.tex
 
 # javadoc
 doc/
+
+# temp
+data/save.json
