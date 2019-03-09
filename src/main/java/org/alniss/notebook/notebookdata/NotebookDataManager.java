@@ -10,12 +10,12 @@ import java.io.FileReader;
 import java.util.*;
 
 public class NotebookDataManager {
-    public static File messageFile = relativeFile("\\data\\testdata.json");
-    public static File messageFile2 = relativeFile("\\data\\testdata2.json");
-    public static File saveFile = relativeFile("\\data\\save.json");
-    public static File userFile = relativeFile("\\data\\users.json");
-    public static File latexFile = relativeFile("\\data\\latex\\notebook.tex");
-    public static File latexPDFFile = relativeFile("\\data\\latex\\notebook.pdf");
+    public static File messageFile = relativeFile("/data/testdata.json");
+    public static File messageFile2 = relativeFile("/data/testdata2.json");
+    public static File saveFile = relativeFile("/data/save.json");
+    public static File userFile = relativeFile("/data/users.json");
+    public static File latexFile = relativeFile("/data/latex/notebook.tex");
+    public static File latexPDFFile = relativeFile("/data/latex/notebook.pdf");
 
 
     public SlackEntry[] slackEntries;

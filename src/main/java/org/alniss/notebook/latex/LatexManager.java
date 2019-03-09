@@ -6,6 +6,7 @@ import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 
 public class LatexManager {
     public static void createLatex(NotebookDataManager ndm) {
@@ -19,7 +20,7 @@ public class LatexManager {
             String folder = NotebookDataManager.latexFile.getAbsolutePath();
             folder = folder.substring(0, folder.length() - "notebook.tex".length());
             ProcessBuilder builder = new ProcessBuilder(
-                    "cmd.exe", "/c", "cd \"" + folder + "\" && pdflatex notebook.tex");
+                    "/bin/bash", "-c", "cd \"" + folder + "\" && pdflatex notebook.tex");
             builder.redirectErrorStream(true);
             Process p = builder.start();
             BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
