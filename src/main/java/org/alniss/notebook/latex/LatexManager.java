@@ -1,12 +1,12 @@
 package org.alniss.notebook.latex;
 
+import org.alniss.notebook.notebookdata.DataInfo;
 import org.alniss.notebook.notebookdata.NotebookDataManager;
 
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintStream;
 
 public class LatexManager {
     public static void createLatex(NotebookDataManager ndm) {
@@ -17,7 +17,7 @@ public class LatexManager {
 
     public static void compileLatex() {
         try {
-            String folder = NotebookDataManager.latexFile.getAbsolutePath();
+            String folder = DataInfo.latexFile.getAbsolutePath();
             folder = folder.substring(0, folder.length() - "notebook.tex".length());
             ProcessBuilder builder = new ProcessBuilder(
                     "/bin/bash", "-c", "cd \"" + folder + "\" && pdflatex notebook.tex");
@@ -37,7 +37,7 @@ public class LatexManager {
 
     public static void openLatexPDF() {
         try {
-            Desktop.getDesktop().open(NotebookDataManager.latexPDFFile);
+            Desktop.getDesktop().open(DataInfo.latexPDFFile);
         } catch (IOException e) {
             e.printStackTrace();
         }

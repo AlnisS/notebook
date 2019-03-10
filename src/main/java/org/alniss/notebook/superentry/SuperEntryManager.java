@@ -1,6 +1,7 @@
 package org.alniss.notebook.superentry;
 
 import com.google.gson.Gson;
+import org.alniss.notebook.notebookdata.DataInfo;
 import org.alniss.notebook.slackdata.SlackEntry;
 import org.alniss.notebook.slackdata.SlackUser;
 
@@ -13,6 +14,7 @@ import java.util.Map;
 
 public class SuperEntryManager {
     private Map<String, SuperEntry> superEntries;
+    private Map<String, SlackUser> userMap = generateUserMap(loadUsers(DataInfo.userFile));
 
     public SuperEntryManager() {
         superEntries = new HashMap<>();
@@ -41,9 +43,9 @@ public class SuperEntryManager {
 
     // loading related things
 
-    public void loadSlackEntries(Map<String, SlackUser> userMap, File... files) {
+    public void loadSlackEntries(File... files) {
         for (File file : files) {
-            addSlackEntries(loadSlackEntries(file), userMap);
+            addSlackEntries(loadSlackEntries(file));
         }
     }
 
@@ -60,9 +62,9 @@ public class SuperEntryManager {
         return entries;
     }
 
-    public void addSlackEntries(SlackEntry[] slackEntries, Map<String, SlackUser> users) {
+    public void addSlackEntries(SlackEntry[] slackEntries) {
         for (SlackEntry slackEntry : slackEntries) {
-            SuperEntry newEntry = new SuperEntry(slackEntry, users);
+            SuperEntry newEntry = new SuperEntry(slackEntry, userMap);
             String newEntryID = newEntry.getUniqueID();
 
             if (superEntries.containsKey(newEntryID)) {
@@ -74,8 +76,31 @@ public class SuperEntryManager {
         }
     }
 
+    public static SlackUser[] loadUsers(File userFile) {
+        Gson gson = new Gson();
+        SlackUser[] users = new SlackUser[0];
+        try {
+            users = gson.fromJson(new FileReader(userFile), SlackUser[].class);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return users;
+    }
+
+    public static Map<String, SlackUser> generateUserMap(SlackUser[] slackUsers) {
+        Map<String, SlackUser> userMap = new HashMap<>();
+        for (SlackUser user : slackUsers) {
+            userMap.put(user.id, user);
+        }
+        return userMap;
+    }
+
 
     // misc getter things
+
+    public Map<String, SlackUser> getUserMap() {
+        return userMap;
+    }
 
     public SlackEntry[] getAllAsSlackEntries() {
         return getAllAsSlackEntries(getAllSuperEntries());

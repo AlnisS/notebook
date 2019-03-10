@@ -1,6 +1,6 @@
 package org.alniss.notebook.latex;
 
-import org.alniss.notebook.notebookdata.NotebookDataManager;
+import org.alniss.notebook.notebookdata.DataInfo;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -10,7 +10,7 @@ public class LatexConnector {
 
     public static void init() {
         try {
-            latexOut = new PrintWriter(NotebookDataManager.latexFile);
+            latexOut = new PrintWriter(DataInfo.latexFile);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
