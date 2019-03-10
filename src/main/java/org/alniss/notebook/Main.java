@@ -12,6 +12,7 @@ public class Main {
         sem.loadSlackEntries(DataInfo.messageFile);
         sem.loadSlackEntries(DataInfo.messageFile2);
 
+        sem.resolveAllUnquestioningly();
         sem.pushAllUnquestioningly();
         sem.serializeSave(DataInfo.saveFile);
 

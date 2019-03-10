@@ -14,7 +14,6 @@ public class SuperEntry {
     private SlackUser author;  // warning: deserialization -> references not equal
     private String ts;
     private transient Date timestamp;
-    private boolean requiresInspection = false;
     private String uniqueID;
     private SlackEntry conflict = null;
 
@@ -36,17 +35,12 @@ public class SuperEntry {
         return !base.equals(text);
     }
 
-    public void updateConflictStatus() {
+    public void forceConflictResolve() {
         if (conflict == null)
             return;
 
-        if (isUpdate(conflict.text)) {
-            requiresInspection = true;
-            base = conflict.text;
-        } else {
-            requiresInspection = false;
-            conflict = null;
-        }
+        base = conflict.text;
+        conflict = null;
     }
 
     public void publish() {
@@ -55,7 +49,6 @@ public class SuperEntry {
 
     public void pushText() {
         staging = base;
-        updateConflictStatus();
     }
 
     public String getStaging() {
@@ -88,8 +81,6 @@ public class SuperEntry {
             conflict = null;
             return;
         }
-
-        updateConflictStatus();
     }
 
     public boolean hasConflict() {

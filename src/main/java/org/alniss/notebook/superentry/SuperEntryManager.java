@@ -130,17 +130,17 @@ public class SuperEntryManager {
 
     // misc other things
 
+    public void resolveAllUnquestioningly() {
+        List<SuperEntry> entries = getAllSuperEntries();
+        for (SuperEntry entry : entries) {
+            entry.forceConflictResolve();
+        }
+    }
+
     public void pushAllUnquestioningly() {
         List<SuperEntry> entries = getAllSuperEntries();
         for (SuperEntry entry : entries) {
             entry.pushText();
-        }
-    }
-
-    public void updateAll() {
-        List<SuperEntry> entries = getAllSuperEntries();
-        for (SuperEntry entry : entries) {
-            entry.updateConflictStatus();
         }
     }
 }
