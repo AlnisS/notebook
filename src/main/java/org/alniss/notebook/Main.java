@@ -14,7 +14,7 @@ public class Main {
         notebookDataManager.superEntryManager = new SuperEntryManager();
         notebookDataManager.superEntryManager.deserializeAndAddEntries(NotebookDataManager.saveFile);
 
-        notebookDataManager.battenTheHatches();
+        notebookDataManager.prepareNotebookData();
         notebookDataManager.printEntries();
 
         LatexManager.createLatex(notebookDataManager);

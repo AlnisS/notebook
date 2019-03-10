@@ -17,20 +17,14 @@ public class NotebookDataManager {
     public static File latexFile = relativeFile("/data/latex/notebook.tex");
     public static File latexPDFFile = relativeFile("/data/latex/notebook.pdf");
 
-
-    public SlackEntry[] slackEntries;
-    public SlackUser[] users;
-    public Map<String, SlackUser> userMap;
-
-    public NotebookEntry[] notebookEntries;
-    public NotebookDay[] notebookDays;
     public static final Date seasonStart = new GregorianCalendar(2018, Calendar.SEPTEMBER, 3).getTime();
+
+    public Map<String, SlackUser> userMap = generateUserMap(loadUsers(userFile));
+    public NotebookDay[] notebookDays;
     public SuperEntryManager superEntryManager;
 
     public NotebookDataManager() {
-        setupUserData();
         loadAllEntries();
-        //prepareNotebookData();
     }
 
     public static File relativeFile(String path) {
@@ -43,18 +37,9 @@ public class NotebookDataManager {
         superEntryManager.addSlackEntries(loadSlackEntries(messageFile2), userMap);
     }
 
-    private void setupUserData() {
-        users = loadUsers(userFile);
-        userMap = generateUserMap(users);
-    }
-
-    public void battenTheHatches() {
-        slackEntries = superEntryManager.getAllAsSlackEntries();
-        prepareNotebookData();
-    }
-
-    private void prepareNotebookData() {
-        notebookEntries = createNotebookEntries(slackEntries, userMap);
+    public void prepareNotebookData() {
+        SlackEntry[] slackEntries = superEntryManager.getAllAsSlackEntries();
+        NotebookEntry[] notebookEntries = createNotebookEntries(slackEntries, userMap);
         notebookDays = generateNotebookDays(notebookEntries);
         sortDayEntries(notebookDays);
         setupTitles(notebookDays);

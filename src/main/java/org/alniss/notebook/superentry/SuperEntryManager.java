@@ -1,14 +1,9 @@
 package org.alniss.notebook.superentry;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import org.alniss.notebook.slackdata.SlackEntry;
 import org.alniss.notebook.slackdata.SlackUser;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
