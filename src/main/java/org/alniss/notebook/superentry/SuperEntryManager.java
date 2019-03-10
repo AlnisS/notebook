@@ -22,34 +22,13 @@ public class SuperEntryManager {
     }
 
     public void deserializeAndAddEntries(File input) {
-        GsonBuilder builder = new GsonBuilder();
-        Gson gson = builder.create();
-
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(input));
-            SuperTemporaryContainer tmp = gson.fromJson(bufferedReader, SuperTemporaryContainer.class);
-            addSuperEntries(tmp.super_entries);
-            bufferedReader.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
+        addSuperEntries(SuperTemporaryContainer.deserializeEntries(input));
         for (SuperEntry entry : superEntries.values())
             entry.initAfterDeserialization();
     }
 
     public void serializeEntries(File out) {
-        SuperTemporaryContainer temp = new SuperTemporaryContainer(superEntries.values().toArray(new SuperEntry[superEntries.values().size()]));
-        GsonBuilder builder = new GsonBuilder().setPrettyPrinting();
-        Gson gson = builder.create();
-
-        try {
-            FileWriter writer = new FileWriter(out);
-            writer.write(gson.toJson(temp));
-            writer.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        SuperTemporaryContainer.serializeEntries(superEntries, out);
     }
 
     public void addSuperEntries(SuperEntry[] entries) {
@@ -101,7 +80,7 @@ public class SuperEntryManager {
         List<SuperEntry> entries = getAllSuperEntries();
         for (SuperEntry entry : entries) {
             entry.update();
-            entry.overwriteEditWithOriginal();
+            entry.pushText();
         }
     }
 }

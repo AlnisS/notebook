@@ -39,8 +39,8 @@ public class NotebookDataManager {
 
     private void loadAllEntries() {
         superEntryManager = new SuperEntryManager();
-        superEntryManager.addSlackEntries(loadEntries(messageFile), userMap);
-        superEntryManager.addSlackEntries(loadEntries(messageFile2), userMap);
+        superEntryManager.addSlackEntries(loadSlackEntries(messageFile), userMap);
+        superEntryManager.addSlackEntries(loadSlackEntries(messageFile2), userMap);
     }
 
     private void setupUserData() {
@@ -93,7 +93,7 @@ public class NotebookDataManager {
         return notebookEntries.toArray(new NotebookEntry[notebookEntries.size()]);
     }
 
-    public static SlackEntry[] loadEntries(File messageFile) {
+    public static SlackEntry[] loadSlackEntries(File messageFile) {
         Gson gson = new Gson();
         SlackEntry[] entries = new SlackEntry[0];
         try {

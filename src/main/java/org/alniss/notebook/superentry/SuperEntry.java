@@ -8,37 +8,37 @@ import java.util.Date;
 import java.util.Map;
 
 public class SuperEntry {
-    private String originalText;
-    private String editText;
-    private transient TaggedString outText;
+    private String base;
+    private String staging;
+    private transient TaggedString published;
     private SlackUser author;  // warning: deserialization -> references not equal
-    private String timestampString;
+    private String ts;
     private transient Date timestamp;
     private boolean requiresInspection = false;
     private String uniqueID;
     private SlackEntry conflict = null;
 
     public SuperEntry(SlackEntry slackEntry, Map<String, SlackUser> users) {
-        originalText = slackEntry.text;
-        overwriteEditWithOriginal();
-        pushEditToOut();
+        base = slackEntry.text;
+        pushText();
+        publish();
         author = users.get(slackEntry.user);
-        timestampString = slackEntry.ts;
-        uniqueID = author.id + timestampString;  //this is janky
+        ts = slackEntry.ts;
+        uniqueID = author.id + ts;
     }
 
     public void initAfterDeserialization() {
         initTimestamp();
-        pushEditToOut();
+        publish();
     }
 
     public boolean isUpdate(String text) {
-        return !originalText.equals(text);
+        return !base.equals(text);
     }
 
     public void update(String text) {
         requiresInspection = isUpdate(text);
-        originalText = text;
+        base = text;
     }
 
     public void update() {
@@ -47,24 +47,24 @@ public class SuperEntry {
         update(conflict.text);
     }
 
-    public void pushEditToOut() {
-        outText = new TaggedString(editText);
+    public void publish() {
+        published = new TaggedString(staging);
     }
 
-    public void overwriteEditWithOriginal() {
-        editText = originalText;
+    public void pushText() {
+        staging = base;
     }
 
-    public String getEditText() {
-        return editText;
+    public String getStaging() {
+        return staging;
     }
 
-    public void setEditText(String text) {
-        editText = text;
+    public void setStaging(String text) {
+        staging = text;
     }
 
     private void initTimestamp() {
-        timestamp = new Date(Long.parseLong(timestampString.substring(0, timestampString.indexOf('.'))) * 1000);
+        timestamp = new Date(Long.parseLong(ts.substring(0, ts.indexOf('.'))) * 1000);
     }
 
     public Date getTimestamp() {
@@ -95,8 +95,8 @@ public class SuperEntry {
         this.conflict = conflict;
     }
 
-    public TaggedString getOutText() {
-        return outText;
+    public TaggedString getPublished() {
+        return published;
     }
 
     public SlackUser getAuthor() {
@@ -104,6 +104,6 @@ public class SuperEntry {
     }
 
     public SlackEntry toSlackEntry() {
-        return new SlackEntry(editText, author.id, timestampString);
+        return new SlackEntry(staging, author.id, ts);
     }
 }
