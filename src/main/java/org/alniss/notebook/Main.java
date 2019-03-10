@@ -9,9 +9,10 @@ public class Main {
     public static void main(String[] args) {
         SuperEntryManager sem = new SuperEntryManager();
 
-        sem.loadSlackEntries(DataInfo.messageFile, DataInfo.messageFile2);
+        sem.loadSlackEntries(DataInfo.messageFile);
+        sem.loadSlackEntries(DataInfo.messageFile2);
 
-        sem.updateAllUnquestioningly();
+        sem.pushAllUnquestioningly();
         sem.serializeSave(DataInfo.saveFile);
 
         sem = new SuperEntryManager();

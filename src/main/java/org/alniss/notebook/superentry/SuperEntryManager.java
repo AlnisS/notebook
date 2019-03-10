@@ -45,11 +45,11 @@ public class SuperEntryManager {
 
     public void loadSlackEntries(File... files) {
         for (File file : files) {
-            addSlackEntries(loadSlackEntries(file));
+            addSlackEntries(loadSlackEntriesSingle(file));
         }
     }
 
-    public static SlackEntry[] loadSlackEntries(File messageFile) {
+    public static SlackEntry[] loadSlackEntriesSingle(File messageFile) {
         Gson gson = new Gson();
         SlackEntry[] entries = new SlackEntry[0];
         try {
@@ -130,11 +130,17 @@ public class SuperEntryManager {
 
     // misc other things
 
-    public void updateAllUnquestioningly() {
+    public void pushAllUnquestioningly() {
         List<SuperEntry> entries = getAllSuperEntries();
         for (SuperEntry entry : entries) {
-            entry.update();
             entry.pushText();
+        }
+    }
+
+    public void updateAll() {
+        List<SuperEntry> entries = getAllSuperEntries();
+        for (SuperEntry entry : entries) {
+            entry.updateConflictStatus();
         }
     }
 }

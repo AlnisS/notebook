@@ -36,15 +36,17 @@ public class SuperEntry {
         return !base.equals(text);
     }
 
-    public void update(String text) {
-        requiresInspection = isUpdate(text);
-        base = text;
-    }
-
-    public void update() {
+    public void updateConflictStatus() {
         if (conflict == null)
             return;
-        update(conflict.text);
+
+        if (isUpdate(conflict.text)) {
+            requiresInspection = true;
+            base = conflict.text;
+        } else {
+            requiresInspection = false;
+            conflict = null;
+        }
     }
 
     public void publish() {
@@ -53,6 +55,7 @@ public class SuperEntry {
 
     public void pushText() {
         staging = base;
+        updateConflictStatus();
     }
 
     public String getStaging() {
@@ -85,6 +88,8 @@ public class SuperEntry {
             conflict = null;
             return;
         }
+
+        updateConflictStatus();
     }
 
     public boolean hasConflict() {
