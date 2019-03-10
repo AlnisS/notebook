@@ -18,14 +18,18 @@ public class SuperEntryManager {
         superEntries = new HashMap<>();
     }
 
-    public void deserializeSave(File input) {
-        addSuperEntries(SuperTemporaryContainer.deserializeEntries(input));
-        for (SuperEntry entry : superEntries.values())
-            entry.initAfterDeserialization();
-    }
+
+    // save serialization related things
 
     public void serializeSave(File out) {
         SuperTemporaryContainer.serializeEntries(superEntries, out);
+    }
+
+    public void deserializeSave(File input) {
+        SuperEntry[] entries = SuperTemporaryContainer.deserializeEntries(input);
+        for (SuperEntry entry : superEntries.values())
+            entry.initAfterDeserialization();
+        addSuperEntries(entries);
     }
 
     public void addSuperEntries(SuperEntry[] entries) {
@@ -33,6 +37,9 @@ public class SuperEntryManager {
             superEntries.put(entry.getUniqueID(), entry);
         }
     }
+
+
+    // loading related things
 
     public void loadSlackEntries(Map<String, SlackUser> userMap, File... files) {
         for (File file : files) {
@@ -67,8 +74,23 @@ public class SuperEntryManager {
         }
     }
 
+
+    // misc getter things
+
+    public SlackEntry[] getAllAsSlackEntries() {
+        return getAllAsSlackEntries(getAllSuperEntries());
+    }
+
     public List<SuperEntry> getAllSuperEntries() {
         return new ArrayList<>(superEntries.values());
+    }
+
+    public SlackEntry[] getAllAsSlackEntries(List<SuperEntry> superEntries) {
+        SlackEntry[] result = new SlackEntry[superEntries.size()];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = superEntries.get(i).toSlackEntry();
+        }
+        return result;
     }
 
     public List<SuperEntry> getConflictingSuperEntries() {
@@ -80,17 +102,8 @@ public class SuperEntryManager {
         return result;
     }
 
-    public SlackEntry[] getAllAsSlackEntries(List<SuperEntry> superEntries) {
-        SlackEntry[] result = new SlackEntry[superEntries.size()];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = superEntries.get(i).toSlackEntry();
-        }
-        return result;
-    }
 
-    public SlackEntry[] getAllAsSlackEntries() {
-        return getAllAsSlackEntries(getAllSuperEntries());
-    }
+    // misc other things
 
     public void updateAllUnquestioningly() {
         List<SuperEntry> entries = getAllSuperEntries();
