@@ -6,18 +6,21 @@ import org.alniss.notebook.superentry.SuperEntryManager;
 
 public class Main {
     public static void main(String[] args) {
-        NotebookDataManager notebookDataManager = new NotebookDataManager();
+        NotebookDataManager ndm = new NotebookDataManager();
+        SuperEntryManager sem = new SuperEntryManager();
 
-        notebookDataManager.superEntryManager.updateAllUnquestioningly();
-        notebookDataManager.superEntryManager.serializeEntries(NotebookDataManager.saveFile);
+        sem.loadSlackEntries(ndm.userMap, ndm.messageFile, ndm.messageFile2);
 
-        notebookDataManager.superEntryManager = new SuperEntryManager();
-        notebookDataManager.superEntryManager.deserializeAndAddEntries(NotebookDataManager.saveFile);
+        sem.updateAllUnquestioningly();
+        sem.serializeSave(NotebookDataManager.saveFile);
 
-        notebookDataManager.prepareNotebookData();
-        notebookDataManager.printEntries();
+        sem = new SuperEntryManager();
+        sem.deserializeSave(NotebookDataManager.saveFile);
 
-        LatexManager.createLatex(notebookDataManager);
+        ndm.prepareNotebookData(sem);
+        ndm.printEntries();
+
+        LatexManager.createLatex(ndm);
         LatexManager.compileLatex();
         LatexManager.openLatexPDF();
     }

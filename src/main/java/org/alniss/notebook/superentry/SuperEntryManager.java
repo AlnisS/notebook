@@ -1,9 +1,11 @@
 package org.alniss.notebook.superentry;
 
+import com.google.gson.Gson;
 import org.alniss.notebook.slackdata.SlackEntry;
 import org.alniss.notebook.slackdata.SlackUser;
 
 import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,13 +18,13 @@ public class SuperEntryManager {
         superEntries = new HashMap<>();
     }
 
-    public void deserializeAndAddEntries(File input) {
+    public void deserializeSave(File input) {
         addSuperEntries(SuperTemporaryContainer.deserializeEntries(input));
         for (SuperEntry entry : superEntries.values())
             entry.initAfterDeserialization();
     }
 
-    public void serializeEntries(File out) {
+    public void serializeSave(File out) {
         SuperTemporaryContainer.serializeEntries(superEntries, out);
     }
 
@@ -30,6 +32,25 @@ public class SuperEntryManager {
         for (SuperEntry entry : entries) {
             superEntries.put(entry.getUniqueID(), entry);
         }
+    }
+
+    public void loadSlackEntries(Map<String, SlackUser> userMap, File... files) {
+        for (File file : files) {
+            addSlackEntries(loadSlackEntries(file), userMap);
+        }
+    }
+
+    public static SlackEntry[] loadSlackEntries(File messageFile) {
+        Gson gson = new Gson();
+        SlackEntry[] entries = new SlackEntry[0];
+        try {
+            entries = gson.fromJson(new FileReader(messageFile), SlackEntry[].class);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        for (SlackEntry slackEntry : entries)
+            slackEntry.tagString();
+        return entries;
     }
 
     public void addSlackEntries(SlackEntry[] slackEntries, Map<String, SlackUser> users) {

@@ -23,21 +23,13 @@ public class NotebookDataManager {
     public NotebookDay[] notebookDays;
     public SuperEntryManager superEntryManager;
 
-    public NotebookDataManager() {
-        loadAllEntries();
-    }
+    public NotebookDataManager() {}
 
     public static File relativeFile(String path) {
         return new File(System.getProperty("user.dir") + path);
     }
 
-    private void loadAllEntries() {
-        superEntryManager = new SuperEntryManager();
-        superEntryManager.addSlackEntries(loadSlackEntries(messageFile), userMap);
-        superEntryManager.addSlackEntries(loadSlackEntries(messageFile2), userMap);
-    }
-
-    public void prepareNotebookData() {
+    public void prepareNotebookData(SuperEntryManager superEntryManager) {
         SlackEntry[] slackEntries = superEntryManager.getAllAsSlackEntries();
         NotebookEntry[] notebookEntries = createNotebookEntries(slackEntries, userMap);
         notebookDays = generateNotebookDays(notebookEntries);
@@ -76,19 +68,6 @@ public class NotebookDataManager {
                 notebookEntries.add(new NotebookEntry(context, i, users));
         }
         return notebookEntries.toArray(new NotebookEntry[notebookEntries.size()]);
-    }
-
-    public static SlackEntry[] loadSlackEntries(File messageFile) {
-        Gson gson = new Gson();
-        SlackEntry[] entries = new SlackEntry[0];
-        try {
-            entries = gson.fromJson(new FileReader(messageFile), SlackEntry[].class);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        for (SlackEntry slackEntry : entries)
-            slackEntry.tagString();
-        return entries;
     }
 
     public static SlackUser[] loadUsers(File userFile) {
