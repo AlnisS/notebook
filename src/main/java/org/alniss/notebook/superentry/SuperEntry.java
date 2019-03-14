@@ -16,23 +16,29 @@ public class SuperEntry {
     private transient Date timestamp;
     private String uniqueID;
     private SlackEntry conflict = null;
+    private InspectionState inspectionState;
+    private InclusionState inclusionState;
 
-    public SuperEntry(SlackEntry slackEntry, Map<String, SlackUser> users) {
+
+    public SuperEntry(SlackEntry slackEntry, Map<String, SlackUser> users,
+                      InspectionState inspectionState, InclusionState inclusionState) {
         base = slackEntry.text;
         pushText();
         publish();
         author = users.get(slackEntry.user);
         ts = slackEntry.ts;
         uniqueID = author.id + ts;
+        this.inspectionState = inspectionState;
+        this.inclusionState = inclusionState;
+    }
+
+    public SuperEntry(SlackEntry slackEntry, Map<String, SlackUser> users) {
+        this(slackEntry, users, InspectionState.NEW, InclusionState.POTENTIAL);
     }
 
     public void initAfterDeserialization() {
         initTimestamp();
         publish();
-    }
-
-    public boolean isUpdate(String text) {
-        return !base.equals(text);
     }
 
     public void forceConflictResolve() {
@@ -41,6 +47,7 @@ public class SuperEntry {
 
         base = conflict.text;
         conflict = null;
+        inspectionState = InspectionState.UPDATED;
     }
 
     public void publish() {
@@ -74,10 +81,10 @@ public class SuperEntry {
     }
 
     public void simpleMaybeResolveConflict() {
-        if (!hasConflict())
+        if (conflict == null)
             return;
 
-        if (!isUpdate(conflict.text)) {
+        if (base.equals(conflict.text)) {
             conflict = null;
             return;
         }
@@ -101,5 +108,13 @@ public class SuperEntry {
 
     public SlackEntry toSlackEntry() {
         return new SlackEntry(staging, author.id, ts);
+    }
+
+    public enum InspectionState {
+        NEW, UPDATED, DRAFT, READY
+    }
+
+    public enum InclusionState {
+        EXCLUDE, POTENTIAL, INCLUDE
     }
 }
