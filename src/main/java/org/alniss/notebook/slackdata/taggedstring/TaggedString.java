@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
  */
 public class TaggedString {
     private String rawString;
-    private String processedString;
+    private transient String processedString = null;
     private transient Map<String, Object> tagValues;
 
     private static Tag[] allTags = new Tag[] {
@@ -36,14 +36,16 @@ public class TaggedString {
                 }
 
                 @Override
+                @SuppressWarnings("all") // to prevent crankiness about using number for month
                 public Object getValue(String tag) {
                     int month = Integer.parseInt(tag.substring(0, tag.indexOf("-")));
                     int day = Integer.parseInt(tag.substring(tag.indexOf("-") + 1));
                     int year = Calendar.getInstance().get(Calendar.YEAR);
 
                     Date result = new GregorianCalendar(year - 1, month - 1, day).getTime();
-                    if (result.before(NotebookDataManager.seasonStart))
+                    if (result.before(NotebookDataManager.seasonStart)) {
                         result = new GregorianCalendar(year, month - 1, day).getTime();
+                    }
                     return result;
                 }
 
@@ -162,10 +164,10 @@ public class TaggedString {
                     if (tag.length() == 2)
                         return "\\\\newline";
                     int x = Integer.parseInt(tag.substring(3));
-                    String res = "";
+                    StringBuilder res = new StringBuilder();
                     for (int i = 0; i < x; i++)
-                        res += "\\\\newline";
-                    return res;
+                        res.append("\\\\newline");
+                    return res.toString();
                 }
 
                 @Override
@@ -203,15 +205,19 @@ public class TaggedString {
      */
     public TaggedString(String rawString) {
         this.rawString = rawString;
-        this.processedString = rawString;
-        initTagValues();
     }
 
-    public void initTagValues() {
+    private void initTagValuesIfNeeded() {
+        if (processedString == null || tagValues == null)
+            initTagValues();
+    }
+
+    private void initTagValues() {
         tagValues = new HashMap<>();
+        String processedStringCandidate = rawString;
 
         for (Tag tag : allTags) {
-            String tagRegex = "\\[" + tag.getInnerRegex() + "\\]";
+            String tagRegex = "\\[" + tag.getInnerRegex() + "]";
             Pattern pattern = Pattern.compile(tagRegex);
             Matcher matcher = pattern.matcher(rawString);
 
@@ -220,9 +226,11 @@ public class TaggedString {
                 String tagString = matcher.group();
                 tagString = tagString.substring(1, tagString.length() - 1);
                 tagValues.put(tag.getName() + i++, tag.getValue(tagString));
-                processedString = processedString.replaceFirst(tagRegex, tag.getReplacement(tagString)).trim();
+                processedStringCandidate = processedStringCandidate.replaceFirst(tagRegex, tag.getReplacement(tagString)).trim();
             }
         }
+
+        this.processedString = processedStringCandidate;
     }
 
     /**
@@ -231,6 +239,7 @@ public class TaggedString {
      * @return value of tag specified.
      */
     public Object getTagValue(String tag) {
+        initTagValuesIfNeeded();
         return tagValues.get(tag);
     }
 
@@ -240,6 +249,7 @@ public class TaggedString {
      * @return whether the original String has that tag.
      */
     public boolean hasTag(String tag) {
+        initTagValuesIfNeeded();
         return tagValues.containsKey(tag);
     }
 
@@ -247,6 +257,7 @@ public class TaggedString {
      * Gets the original, unprocessed String given during creation of the TaggedString.
      * @return original, unprocessed String given during creation of the TaggedString.
      */
+    @SuppressWarnings("unused")
     public String getRawString() {
         return rawString;
     }
@@ -256,6 +267,7 @@ public class TaggedString {
      * @return processed String with tags removed from the text.
      */
     public String getProcessedString() {
+        initTagValuesIfNeeded();
         return processedString;
     }
 }
