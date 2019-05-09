@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * Represents a String with Tags associated with it.
  *
- * <p> Tags are specified within [ ] characters. They are specified as anonymous
+ * <p> Tags are written within [ ] characters. They are programmed as anonymous
  * classes implementing the Tag interface. A TaggedString extracts the info
  * from such tags and holds the original, raw String, the processed String
  * with tag text removed, and the key-value pairs of the tags themselves.
@@ -90,7 +90,8 @@ public class TaggedString {
 
                 @Override
                 public Object getValue(String tag) {
-                    return new int[] {Integer.parseInt(tag.substring(3, 5)), Integer.parseInt(tag.substring(6, 8))};
+                    return new int[] {Integer.parseInt(tag.substring(3, 5)),
+                            Integer.parseInt(tag.substring(6, 8))};
                 }
 
                 @Override
@@ -112,7 +113,8 @@ public class TaggedString {
 
                 @Override
                 public Object getValue(String tag) {
-                    return new int[] {Integer.parseInt(tag.substring(3, 5)), Integer.parseInt(tag.substring(6, 8))};
+                    return new int[] {Integer.parseInt(tag.substring(3, 5)),
+                            Integer.parseInt(tag.substring(6, 8))};
                 }
 
                 @Override
@@ -200,7 +202,8 @@ public class TaggedString {
     };
 
     /**
-     * Processes input against tags specified in allTags, produces key-value map, and creates cleaned String.
+     * Processes input against tags specified in allTags, produces key-value
+     * map, and creates cleaned String.
      * @param rawString raw String to be processed and used.
      */
     public TaggedString(String rawString) {
@@ -226,7 +229,8 @@ public class TaggedString {
                 String tagString = matcher.group();
                 tagString = tagString.substring(1, tagString.length() - 1);
                 tagValues.put(tag.getName() + i++, tag.getValue(tagString));
-                processedStringCandidate = processedStringCandidate.replaceFirst(tagRegex, tag.getReplacement(tagString)).trim();
+                processedStringCandidate = processedStringCandidate
+                        .replaceFirst(tagRegex, tag.getReplacement(tagString)).trim();
             }
         }
 
@@ -254,7 +258,6 @@ public class TaggedString {
     }
 
     /**
-     * Gets the original, unprocessed String given during creation of the TaggedString.
      * @return original, unprocessed String given during creation of the TaggedString.
      */
     @SuppressWarnings("unused")
@@ -263,7 +266,6 @@ public class TaggedString {
     }
 
     /**
-     * Gets the processed String with tags removed from the text.
      * @return processed String with tags removed from the text.
      */
     public String getProcessedString() {

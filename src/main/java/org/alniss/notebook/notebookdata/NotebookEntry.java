@@ -63,9 +63,9 @@ public class NotebookEntry {
         slackFiles = new HashMap<>();
 
         for (int i = entry; i < context.length  // continue iff:
-                && (i == entry            // not the beginning entry
-                || !context[i].isStart()  // or not a starting entry
-                || (context[i].isStart()  // or starting entry, but other user
+                && (i == entry            // is the beginning entry
+                || !context[i].isStart()  // or is not a starting entry
+                || (context[i].isStart()  // or is starting entry, but other user's
                 && !context[i].user.equals(this.author.id))); i++) {
             SlackEntry currentEntry = context[i];
 
@@ -76,6 +76,12 @@ public class NotebookEntry {
         }
     }
 
+    /**
+     * Assembles the entries from Slack into a notebook entry. It iterates over
+     * the slackEntries List, adding the processed/de-tagged String from each to
+     * the initial start String, separating each message with the
+     * MESSAGE_SEPARATOR_STRING.
+     */
     private void formatSlackEntries() {
         if (slackEntries.size() == 0)
             return;
@@ -86,25 +92,35 @@ public class NotebookEntry {
                     + slackEntries.get(i).taggedString.getProcessedString();
     }
 
+    /**
+     * Add the data from a Slack message to the appropriate holders. This is
+     * supposed to do something with uploaded files, but that isn't really
+     * implemented yet.
+     * @param currentEntry entry whose data should be added.
+     */
     private void addData(SlackEntry currentEntry) {
         if (currentEntry.isDocumentation())
             slackEntries.add(currentEntry);
 
         if (currentEntry.files != null) {
             switch (currentEntry.files.length) {
-                case 0:
+                case 0:  // no files
                     break;
-                case 1:
+                case 1:  // one file
                     if (currentEntry.text.substring(0, 5).equals("[fig "))
                         slackFiles.put(Integer.parseInt(currentEntry.text.substring(5,
                                 currentEntry.text.indexOf("]"))), currentEntry.files[0]);
                     break;
-                default:
+                default:  // multiple files (not sure if this can happen, but best be safe)
                     System.out.println("multiple files in one message: " + currentEntry.text);
             }
         }
     }
 
+    /**
+     * @param tag the Tag of interest.
+     * @return List of Booleans where index/boolean combo states Slack entry index/having tag combo.
+     */
     public List<Boolean> hasTag(String tag) {
         List<Boolean> result = new ArrayList<>();
         for (SlackEntry entry : slackEntries)  //TODO: check whether this is safe
@@ -112,6 +128,10 @@ public class NotebookEntry {
         return result;
     }
 
+    /**
+     * @param tag the Tag of interest.
+     * @return List of Objects where index/object combo states Slack entry index/tag contents combo.
+     */
     public List<Object> getTagValue(String tag) {
         List<Object> result = new ArrayList<>();
         for (SlackEntry entry : slackEntries)
@@ -119,6 +139,10 @@ public class NotebookEntry {
         return result;
     }
 
+    /**
+     * @param tag the Tag of interest.
+     * @return whether any Slack entry has the Tag.
+     */
     public boolean anyHasTag(String tag) {
         List<Boolean> hasTag = hasTag(tag);
         for (Boolean b : hasTag)
@@ -127,6 +151,10 @@ public class NotebookEntry {
         return false;
     }
 
+    /**
+     * @param tag the Tag of interest.
+     * @return the contents of the Tag in the first Slack entry with the Tag.
+     */
     public Object anyGetTagValue(String tag) {
         List<Object> tagValue = getTagValue(tag);
         for (Object o : tagValue)
