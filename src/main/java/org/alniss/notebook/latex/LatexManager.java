@@ -24,12 +24,13 @@ public class LatexManager {
             builder.redirectErrorStream(true);
             Process p = builder.start();
             BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            String line;
-            while (true) {
-                line = r.readLine();
-                if (line == null) { break; }
-                System.out.println(line);
-            }
+            //String line;
+            //while (true) {
+            //    line = r.readLine();
+            //    if (line == null) { break; }
+            //    System.out.println(line);
+            //}
+            while (r.readLine() != null) {}
         } catch (IOException e) {
             e.printStackTrace();
         }

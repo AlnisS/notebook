@@ -16,27 +16,27 @@ package org.alniss.notebook.slackdata.taggedstring;
  */
 public interface Tag {
     /**
-     * regex matching inner part of tag
+     * Regex matching inner part of tag.
      * @return regex matching the inner part of the tag, not including the [ ] characters.
      */
     String getInnerRegex();
 
     /**
-     * value of a tag in String form
+     * Value of a tag in String form.
      * @param tag String matching inner regex representing the contents of the Tag.
      * @return value extracted from those contents.
      */
     Object getValue(String tag);
 
     /**
-     * replacement for a tag in String form
+     * Replacement for a tag in String form.
      * @param tag String matching inner regex representing the contents of the Tag.
      * @return replacement for the entire Tag assuming [ ] is removed.
      */
     String getReplacement(String tag);
 
     /**
-     * unique name for the tag
+     * Unique name for the tag (e.g. "date").
      * @return unique name of the Tag type used as key in tables holding key-tag value pairs.
      */
     String getName();

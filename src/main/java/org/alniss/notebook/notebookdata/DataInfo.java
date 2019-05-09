@@ -2,6 +2,9 @@ package org.alniss.notebook.notebookdata;
 
 import java.io.File;
 
+/**
+ * Stores paths to data.
+ */
 public class DataInfo {
     public static File messageFile = relativeFile("/data/testdata.json");
     public static File messageFile2 = relativeFile("/data/testdata2.json");
